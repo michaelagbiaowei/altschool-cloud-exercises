@@ -1,0 +1,17 @@
+commit aa3c569d8acc8f554a80524086dca1537d388e25
+Author: bryanwalton <bryanwalton1997@gmail.com>
+Date:   Wed Sep 7 22:17:18 2022 +0100
+
+    Altschool Cloud Exercises Edited and Resubmitted
+
+commit 1f6576d949ebeec9b428bc4a2fbab0790264091a
+Author: bryanwalton <bryanwalton1997@gmail.com>
+Date:   Sun Aug 28 13:47:04 2022 +0100
+
+    My first commit
+
+commit 09367f6311b002c423e196ee9332adc02847590b
+Author: maiempire <63314981+maiempire@users.noreply.github.com>
+Date:   Sun Aug 28 13:31:26 2022 +0100
+
+    Initial commit

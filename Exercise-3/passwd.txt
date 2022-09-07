@@ -13,7 +13,7 @@ proxy:x:13:13:proxy:/bin:/usr/sbin/nologin
 www-data:x:33:33:www-data:/var/www:/usr/sbin/nologin
 backup:x:34:34:backup:/var/backups:/usr/sbin/nologin
 list:x:38:38:Mailing List Manager:/var/list:/usr/sbin/nologin
-irc:x:39:39:ircd:/run/ircd:/usr/sbin/nologin
+irc:x:39:39:ircd:/var/run/ircd:/usr/sbin/nologin
 gnats:x:41:41:Gnats Bug-Reporting System (admin):/var/lib/gnats:/usr/sbin/nologin
 nobody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin
 systemd-network:x:100:102:systemd Network Management,,,:/run/systemd:/usr/sbin/nologin
@@ -32,8 +32,6 @@ vagrant:x:1000:1000:,,,:/home/vagrant:/bin/bash
 systemd-coredump:x:999:999:systemd Core Dumper:/:/usr/sbin/nologin
 ubuntu:x:1001:1001:Ubuntu:/home/ubuntu:/bin/bash
 lxd:x:998:100::/var/snap/lxd/common/lxd:/bin/false
-usbmux:x:112:46:usbmux daemon,,,:/var/lib/usbmux:/usr/sbin/nologin
-vboxadd:x:997:1::/var/run/vboxadd:/bin/false
-user-1:x:1002:1004::/home/user-1:/bin/sh
-user-2:x:1003:1005::/home/user-2:/bin/sh
-user-3:x:1004:1006::/home/user-3:/bin/sh
+michael:x:1002:1004::/home/michael:/bin/sh
+user-1:x:1003:1005::/home/user-1:/bin/sh
+user-2:x:1004:1006::/home/user-2:/bin/sh

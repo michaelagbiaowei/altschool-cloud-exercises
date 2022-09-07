@@ -1,0 +1,2 @@
+origin	git@maiempire:maiempire/altschool-cloud-exercises.git (fetch)
+origin	git@maiempire:maiempire/altschool-cloud-exercises.git (push)
