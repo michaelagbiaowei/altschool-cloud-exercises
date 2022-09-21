@@ -1,6 +1,6 @@
 **Login in as root**
 
-**Step 1: Make a Directory for Each Site**
+**Step 1: Make a Directory for your Site**
 
 You’ll create a directory for your site that you’ll be hosting, within the /var/www folder. This location newly created location is also dubbed the document root location; you’ll need to set this path later in the configuration file. Sub the phpdomain.com for your domain name.
 
