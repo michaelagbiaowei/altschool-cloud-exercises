@@ -1,4 +1,4 @@
-## SETS TO SETUP ANSIBLE HOSTS NAMES USING "MASTER and SLAVE(s)"
+## STEPS TO SETUP ANSIBLE HOSTS NAMES USING "MASTER and SLAVE(s)"
 
 Assuming master and slave(s) is **already** configured properly either through a cloud service provider e.g AWS **OR** locally on your Desktop(two or more VMs)...
 
