@@ -4,7 +4,7 @@ Assuming master and slave(s) is **already** configured properly either through a
 
 **THEN:**
 
-**NOTE:: ALL SETS MUST BE DONE IN MASTER ONLY**
+**NOTE:: ALL STEPS MUST BE DONE IN MASTER ONLY**
 
 **Step 1: Download Ansible on MASTER**
 
