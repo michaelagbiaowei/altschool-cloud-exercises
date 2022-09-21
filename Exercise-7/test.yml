@@ -1,0 +1,23 @@
+# should be done on local machine e.g (windows/linux) and not vm
+# install yaml linter package for indentation
+# pip install yamllint
+# after installation open Exercise-7 with VSCODE for editing
+
+Ingredientss:
+  - Coffee
+  - Milk
+  - Sugar
+
+Process:
+  - Grinding
+  - Mixing
+  - Etc
+
+Grinding:
+  Coffee: Peets
+  Texture: Coarse
+
+Mixing:
+  Milk: "true"
+  Sugar: "true"
+  No_of_cups: 1

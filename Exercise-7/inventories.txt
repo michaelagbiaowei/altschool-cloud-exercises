@@ -1,0 +1,1 @@
+ubuntu-focal ansible_host=192.168.56.5 ansible_connection=ssh ansible_user=vagrant

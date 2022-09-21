@@ -1,0 +1,43 @@
+# install Apache2 using Ansible
+- name: Setup Ansible server on myserver list (host group)
+  hosts: myservers
+  become: True
+  vars:
+    apache2_version: 2.4.41
+  tasks:
+    # first task --- instal apache2
+    - name: Install the latest version of nginx
+      command: apt install apache2 -y
+
+    # second task --- start the service
+    - name: Start apache2
+      service:
+        name: apache2
+        enabled: yes
+        state: started
+
+    # third task --- confirm apache2 version
+    - name: Get nginx installed version
+      command: apache2 -v
+      register: apache2_version
+    # print the current version of apache2 on screen
+    - name: print apache2 version
+      debug:
+        msg: "The current version of apache2 is {{apache2_version}}"
+
+    # forth task --- connfirm status
+    - name: Getthe status of apache2 service
+      command: systemctl status apache2
+
+    # fifth task --- set server to Africa/Lagos timezone
+    - name: Set timezone to Africa/Lagos
+      command: timedatectl set-timezone Africa/Lagos
+    # sixth task --- confirm time zone has been changed correctly
+    - name: Get status of timezone
+      command: timedatectl
+# ================================================================
+# TIPS:
+# Execute this file from your Exercise-7 folder
+# command: ansible-playbook install-apache2.yml -b
+# "-b" will execute this file as a root user
+# "become: True" ------ also does same work -b
