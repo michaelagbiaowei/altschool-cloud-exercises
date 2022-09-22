@@ -8,7 +8,7 @@ Assuming master and slave(s) is **already** configured properly either through a
 
 **Step 1: Download Ansible on MASTER**
 
-$ sudo apt uppdate -y && apt upgrade -y && apt install ansible -y
+$ sudo apt update -y && apt upgrade -y && apt install ansible -y
 
 **Step 2: Verify installation**
 
