@@ -45,7 +45,7 @@ ServerName phpdomain.com
 
 ServerAlias www.phpdomain.com
 
-DocumentRoot /var/www/php-domain.com/public_html
+DocumentRoot /var/www/phpdomain.com/public_html
 
 ErrorLog ${APACHE_LOG_DIR}/error.log
 
