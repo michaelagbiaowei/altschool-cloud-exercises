@@ -1,7 +1,7 @@
 **Login in as root**
 
 MUST BE DONE ON SLAVE
-5
+
 Prerequisites: php7.4
 
 **Step 1: Make a Directory for your Site**
