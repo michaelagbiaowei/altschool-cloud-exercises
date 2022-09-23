@@ -6,7 +6,7 @@
     apache2_version: 2.4.41
   tasks:
     # first task --- instal apache2
-    - name: Install the latest version of nginx
+    - name: Install the latest version of apache2 
       command: apt install apache2 -y
 
     # second task --- start the service
@@ -17,7 +17,7 @@
         state: started
 
     # third task --- confirm apache2 version
-    - name: Get nginx installed version
+    - name: Get apache2 installed version
       command: apache2 -v
       register: apache2_version
     # print the current version of apache2 on screen
