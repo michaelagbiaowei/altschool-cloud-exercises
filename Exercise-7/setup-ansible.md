@@ -1,14 +1,14 @@
-## STEPS TO SETUP ANSIBLE HOSTS NAMES USING "MASTER and SLAVE(s)"
+## SETS TO SETUP ANSIBLE HOSTS NAMES USING "MASTER and SLAVE(s)"
 
 Assuming master and slave(s) is **already** configured properly either through a cloud service provider e.g AWS **OR** locally on your Desktop(two or more VMs)...
 
 **THEN:**
 
-**NOTE:: ALL STEPS MUST BE DONE IN MASTER ONLY**
+**NOTE:: ALL SETS MUST BE DONE IN MASTER ONLY**
 
 **Step 1: Download Ansible on MASTER**
 
-$ sudo apt update -y && apt upgrade -y && apt install ansible -y
+$ sudo apt uppdate -y && apt upgrade -y && apt install ansible -y
 
 **Step 2: Verify installation**
 

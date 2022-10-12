@@ -6,7 +6,7 @@
     apache2_version: 2.4.41
   tasks:
     # first task --- instal apache2
-    - name: Install the latest version of apache2 
+    - name: Install the latest version of nginx
       command: apt install apache2 -y
 
     # second task --- start the service
@@ -17,7 +17,7 @@
         state: started
 
     # third task --- confirm apache2 version
-    - name: Get apache2 installed version
+    - name: Get nginx installed version
       command: apache2 -v
       register: apache2_version
     # print the current version of apache2 on screen
@@ -26,7 +26,7 @@
         msg: "The current version of apache2 is {{apache2_version}}"
 
     # forth task --- connfirm status
-    - name: Get the status of apache2 service
+    - name: Getthe status of apache2 service
       command: systemctl status apache2
 
     # fifth task --- set server to Africa/Lagos timezone
@@ -40,11 +40,8 @@
     - name: install using ppa:ondrej/php repository
       command: add-apt-repository ppa:ondrej/php
 
-    - name: Install the required requisites
-      command: apt install apt-transport-https lsb-release software-properties-common ca-certificates -y  
-
     - name: install php7.4
-      command: apt install php7.4 -y
+      command: apt install php7.4 -y 
 # ================================================================
 # TIPS:
 # Execute this file from your Exercise-7 folder
