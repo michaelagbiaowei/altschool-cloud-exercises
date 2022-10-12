@@ -35,7 +35,7 @@
     # sixth task --- confirm time zone has been changed correctly
     - name: Get status of timezone
       command: timedatectl
-
+      
     #Install php7.4 on box2
     # install all necessary prerequisites
     - name: php  prerequisites

@@ -14,7 +14,7 @@ $ chmod -R 755 /var/www
 
 To see a home page you’ll want to make sure the index.php file is created for your domain. Something as simple as "The e.g given on LMS" can be set within this file.
 
-$ vim /var/www/domain.com/public_html/index.php
+$ vim /var/www/phpdomain.com/public_html/index.php
 
 Save and quit by hitting the Escape button and typing :wq
 
@@ -45,7 +45,7 @@ ServerName phpdomain.com
 
 ServerAlias www.phpdomain.com
 
-DocumentRoot /var/www/php-domain.com/public_html
+DocumentRoot /var/www/phpdomain.com/public_html
 
 ErrorLog ${APACHE_LOG_DIR}/error.log
 
