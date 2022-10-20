@@ -50,7 +50,7 @@ This command will help to download & install Git directly at the AWS server. Fir
 
 After installation is completed, the below command will prompt the installed version of Git in the AWS server. Hence, the installation is completed
 
-    git --vserion
+    git --version
 
 ![Laravel RealWorld Example App](images/gitversion.png)
 
