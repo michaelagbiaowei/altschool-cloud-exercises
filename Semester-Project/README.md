@@ -139,11 +139,15 @@ We can go for the installation of php and the required extensions as per your we
 
 ![Laravel RealWorld Example App](images/php4.png)
 
-    if error occurs...   Confirm your PUBLIC_KEY from your ERROR MESSEGAE and ...run
+    **if error occurs...   Confirm your PUBLIC_KEY from your ERROR MESSEGAE and ...run**
 
         sudo gpg --keyserver pgpkeys.mit.edu --recv-key B188E2B695BD4743
 
         sudo wget -qO - https://packages.sury.org/php/apt.gpg | sudo apt-key add -
+        
+    Re-run the php installation command
+        
+        sudo apt-get install php8.1 libapache2-mod-php php8.1-dev php8.1-zip php8.1-curl php8.1-mbstring php8.1-mysql php8.1-gd php8.1-xml
 
 - php8.1-cli - command interpreter, useful for testing PHP scripts from a shell or performing general shell scripting tasks
 - php8.1-common - documentation, examples, and common modules for PHP
@@ -195,7 +199,7 @@ Configuration of MySQL repsotiory on Debian and on its [official community downl
 
     sudo apt-key adv --keyserver pgp.mit.edu --recv-keys 467B942D3A79BD29
 
-    sudo apt install mysql-server
+    sudo apt update && sudo apt upgrade -y
 
 You will get option to select for what you want to add via the repository. Use the Arrow key, select **MySQL** Server & Cluster , then press the **TAB button** to select **OK** and hit then the **Enter key**
 
@@ -210,6 +214,8 @@ Again Select OK and then use the TAB to move to OK and hit the Enter key
 ![Laravel RealWorld Example App](images/mc3.png)
 
 // SET YOUR PASSWORD
+
+sudo apt install mysql-server
 
 ![Laravel RealWorld Example App](images/m6.png)
 
