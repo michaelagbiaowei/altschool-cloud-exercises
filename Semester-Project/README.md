@@ -183,7 +183,7 @@ Configuration of MySQL repsotiory on Debian and on its [official community downl
 
 ![Laravel RealWorld Example App](images/m2.png)
 
-    sudo apt install ./mysql-apt-config\_\*\_all.deb
+    sudo apt install ./mysql-apt-config_*_all.deb
 
 ![Laravel RealWorld Example App](images/m3.png)
 
