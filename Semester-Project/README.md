@@ -395,7 +395,7 @@ Let’s start by executing the following command into MySQL
 
     mysql -u root -p
 
-Copy and paste the folloing context
+Copy and paste the following context
 
     CREATE DATABASE laraveldatabase;
 
