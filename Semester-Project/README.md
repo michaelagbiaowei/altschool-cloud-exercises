@@ -139,7 +139,7 @@ We can go for the installation of php and the required extensions as per your we
 
 ![Laravel RealWorld Example App](images/php4.png)
 
-    **if error occurs...   Confirm your PUBLIC_KEY from your ERROR MESSEGAE and ...run**
+**if error occurs...   Confirm your PUBLIC_KEY from your ERROR MESSEGAE and ...run**
 
         sudo gpg --keyserver pgpkeys.mit.edu --recv-key B188E2B695BD4743
 
