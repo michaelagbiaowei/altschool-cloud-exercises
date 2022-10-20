@@ -451,4 +451,4 @@ The last thing in the Laravel setup is migrating the database
 
 At this point, you can now access it laravel application through the URL https://localhost
 
-![Laravel RealWorld Example App] (images/laravelRenderedPageWithPublic-IP.png)
+![Laravel RealWorld Example App](images/laravelRenderedPageWIthPublic-IP.png)
