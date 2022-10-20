@@ -106,7 +106,7 @@ Lastly, change directory into the Laravel Project
 
 ## **Add Sury PHP repo**
 
-The packages to install PHP 8.0 on Debian 11 are not available in the default base repository, hence we have to add the SURY repository manually. The below given is a single command, **COPY THE ENTIRE COMMAND AT ONCE** and paste it in your terminal. And hit the Enter key
+The packages to install PHP 8.1 on Debian 11 are not available in the default base repository, hence we have to add the SURY repository manually. The below given is a single command, **COPY THE ENTIRE COMMAND AT ONCE** and paste it in your terminal. And hit the Enter key
 
     echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main"\
         | sudo tee /etc/apt/sources.list.d/sury-php.list
