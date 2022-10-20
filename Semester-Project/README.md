@@ -449,6 +449,6 @@ The last thing in the Laravel setup is migrating the database
 
 ![Laravel RealWorld Example App](images/migration.png)
 
-At this point, you can now access our laravel application through the URL https://localhost
+At this point, you can now access our laravel application through the URL https://AWS-public-ip
 
 ![Laravel RealWorld Example App](images/laravelRenderedPageWIthPublic-IP.png)
