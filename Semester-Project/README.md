@@ -415,7 +415,7 @@ We can also set the APP_ENV Key to production since our application is in produc
 
 We have to uncomment our web.php context in other to migrate our data
 
-    sudo nano /routes/web.php
+    sudo nano routes/web.php
 
 ![Laravel RealWorld Example App](images/web.php.png)
 
@@ -431,7 +431,7 @@ Disable default Apache2 configuration
 
 Delete default Apache2 configuration
 
-    sudo rm 000-default.conf
+    sudo rm /etc/apache2/sites-available/000-default.conf
 
 Enable Laravel Host configuration
 
