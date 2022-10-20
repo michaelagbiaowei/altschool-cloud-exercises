@@ -54,7 +54,7 @@ After installation is completed, the below command will prompt the installed ver
 
 ![Laravel RealWorld Example App](images/gitversion.png)
 
-## **Step Four**
+## **Step Three**
 
 ## **Install Apache2**
 
@@ -78,7 +78,7 @@ Next, Confirm that the Apache2 Service is Started and Enabled
 
 ![Laravel RealWorld Example App](images/apv.png)
 
-## **Step Five**
+## **Step Four**
 
 ## **Clone Laravel Repository**
 
@@ -100,7 +100,7 @@ Lastly, change directory into the Laravel Project
 
 ![Laravel RealWorld Example App](images/cd.png)
 
-## **Step Six**
+## **Step Five**
 
 ## **Installation of PHP**
 
@@ -167,7 +167,7 @@ We can go for the installation of php and the required extensions as per your we
 
 ![Laravel RealWorld Example App](images/php5.png)
 
-## **Step Seven**
+## **Step Six**
 
 ## **Install MySQL**
 
@@ -243,7 +243,7 @@ It may also prompt to reload privilege tables now This is always a good idea, so
 
 ![Laravel RealWorld Example App](images/m11-3.png)
 
-## **Step Eight**
+## **Step Seven**
 
 ## **Configure Apache2**
 
@@ -287,7 +287,7 @@ Reload the Apache service to apply the changes
 
     sudo systemctl restart apache2
 
-## **Step Nine**
+## **Step Eight**
 
 ## **Configuring php**
 
@@ -307,7 +307,7 @@ Restart the Apache service to apply changes
 
     sudo systemctl restart apache2
 
-## **Step Ten**
+## **Step Nine**
 
 ## **Setting Up Composer for Dependency Management**
 
@@ -345,7 +345,7 @@ To test your installation, with the given command
 
 ![Laravel RealWorld Example App](images/ccc.png)
 
-## **Step Eleven**
+## **Step Ten**
 
 ## **Run Composer**
 
@@ -357,7 +357,7 @@ We use the –no-dev flag to install only the dependencies that are required in 
 
 ![Laravel RealWorld Example App](images/cc2.png)
 
-## **Step Twelve**
+## **Step Eleven**
 
 ## **Laravel Permissions**
 
@@ -375,7 +375,7 @@ In order to run, Apache needs certain permissions over the Laravel directory we 
 
 ![Laravel RealWorld Example App](images/p2.png)
 
-## **Step Thirteen**
+## **Step Twelve**
 
 ## **Confugring .env file**
 
@@ -385,7 +385,7 @@ We can finish the Laravel installation by running the following commands
 
     sudo php artisan key:generate
 
-## **Step Fifteen**
+## **Step Thirteen**
 
 ## **Database Setup**
 
@@ -401,7 +401,7 @@ Copy and paste the following context
 
 ![Laravel RealWorld Example App](images/laraveldatabase.png)
 
-## **Step Sixteen**
+## **Step Fourteen**
 
 ## **Configuring Laravel**
 
