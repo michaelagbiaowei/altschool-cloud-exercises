@@ -407,6 +407,8 @@ Copy and paste the folloing context
 
 We can start by adding the database credentials to the **.env** file we had generated earlier. This file contains all the application variables that need to be kept secret
 
+**NOTE::: APP_KEY=base64 should be left untouched**
+
     sudo nano .env
 
 We can also set the APP_ENV Key to production since our application is in production and also turn the APP_DEBUG key to false. This ensures that no debug and stack trace messages are displayed to the general public
@@ -415,7 +417,7 @@ We can also set the APP_ENV Key to production since our application is in produc
 
 We have to uncomment our web.php context in other to migrate our data
 
-    sudo nano /routes/web.php
+    sudo nano routes/web.php
 
 ![Laravel RealWorld Example App](images/web.php.png)
 
