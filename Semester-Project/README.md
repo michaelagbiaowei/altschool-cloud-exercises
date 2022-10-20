@@ -353,7 +353,7 @@ We can use composer to install the laravel dependencies
 
 We use the –no-dev flag to install only the dependencies that are required in production
 
-    composer install --no-dev
+    sudo composer install --no-dev
 
 ![Laravel RealWorld Example App](images/cc2.png)
 
