@@ -261,7 +261,7 @@ We then need to add the following context into the Laravel Configuration host fi
 
         DocumentRoot /var/www/html/laravel-realworld-example-app/public
 
-        <Directory /var/www/html/laravel-realworld-example-app/public>
+        <Directory /var/www/html/laravel-realworld-example-app>
 
         Options Indexes MultiViews
 
