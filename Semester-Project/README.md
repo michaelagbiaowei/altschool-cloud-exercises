@@ -26,7 +26,7 @@ We will be deploying a real life application:
 
 We will be using Debain 11 on a virtual machine instance with Amazon Web Services (AWS) as our VPC provider.
 
-    **NOTE:** Your Amazon Elastic Compute Cloud (Amazon EC2) instance Inbound Rules should be configured to allow port **22** for SSH and 0 - 65535 for All TCP
+**NOTE:** Your Amazon Elastic Compute Cloud (Amazon EC2) instance Inbound Rules should be configured to allow port **22** for SSH and 0 - 65535 for All TCP
 
 ![Laravel RealWorld Example App](images/aws-sg.png)
 
