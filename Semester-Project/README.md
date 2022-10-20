@@ -84,19 +84,19 @@ Next, Confirm that the Apache2 Service is Started and Enabled
 
 Chance directory to **/var/www/html**
 
-> cd /var/www/html
+    cd /var/www/html
 
 ![Laravel RealWorld Example App](images/html.png)
 
 Next we will clone the Laravel Project int the present working direcctory
 
-> sudo git clone https://github.com/michaelagbiaowei/laravel-realworld-example-app.git
+    sudo git clone https://github.com/michaelagbiaowei/laravel-realworld-example-app.git
 
 ![Laravel RealWorld Example App](images/clone.png)
 
 Lastly, change directory into the Laravel Project
 
-> cd /var/www/html/laravel-realworld-example-app
+    cd /var/www/html/laravel-realworld-example-app
 
 ![Laravel RealWorld Example App](images/cd.png)
 
@@ -106,14 +106,14 @@ Lastly, change directory into the Laravel Project
 
 ## **Add Sury PHP repo**
 
-The packages to install PHP 8.0 on Debian 11 are not available in the default base repository, hence we have to add the SURY repository manually. The below given is a single command, **COPY TH ENTIRE COMMAND AT ONCE** and paste it in your terminal. And hit the Enter key
+The packages to install PHP 8.0 on Debian 11 are not available in the default base repository, hence we have to add the SURY repository manually. The below given is a single command, **COPY THE ENTIRE COMMAND AT ONCE** and paste it in your terminal. And hit the Enter key
 
-> echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main"\
->  | sudo tee /etc/apt/sources.list.d/sury-php.list
+    echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main"\
+        | sudo tee /etc/apt/sources.list.d/sury-php.list
 
 ![Laravel RealWorld Example App](images/php1.png)
 
-> sudo apt install gnupg gnupg2
+    sudo apt install gnupg gnupg2
 
 ![Laravel RealWorld Example App](images/gu.png)
 
@@ -121,13 +121,13 @@ The packages to install PHP 8.0 on Debian 11 are not available in the default ba
 
 The system needs to verify the packages we receive to install PHP 8.0 from the Sury repository, to confirm they have not been altered by anyone
 
-> wget -qO - https://packages.sury.org/php/apt.gpg | sudo apt-key add -
+    wget -qO - https://packages.sury.org/php/apt.gpg | sudo apt-key add -
 
 ![Laravel RealWorld Example App](images/php2.png)
 
 ## **Run system update**
 
-> sudo apt update && sudo apt upgrade -y
+    sudo apt update && sudo apt upgrade -y
 
 ![Laravel RealWorld Example App](images/php3.png)
 
@@ -135,7 +135,7 @@ The system needs to verify the packages we receive to install PHP 8.0 from the S
 
 We can go for the installation of php and the required extensions as per your web application requirements.
 
-> sudo apt-get install php8.1 libapache2-mod-php php8.1-dev php8.1-zip php8.1-curl php8.1-mbstring php8.1-mysql php8.1-gd php8.1-xml
+    sudo apt-get install php8.1 libapache2-mod-php php8.1-dev php8.1-zip php8.1-curl php8.1-mbstring php8.1-mysql php8.1-gd php8.1-xml
 
 ![Laravel RealWorld Example App](images/php4.png)
 
@@ -163,7 +163,7 @@ We can go for the installation of php and the required extensions as per your we
 
 [source] (https://www.digitalocean.com/community/tutorials/how-to-install-php-8-1-and-set-up-a-local-development-environment-on-ubuntu-22-04)
 
-> php -v
+    php -v
 
 ![Laravel RealWorld Example App](images/php5.png)
 
@@ -175,19 +175,19 @@ We can go for the installation of php and the required extensions as per your we
 
 Configuration of MySQL repsotiory on Debian and on its [official community download page] (https://dev.mysql.com/downloads/repo/apt/) and there you will get the latest Apt repsotiory in the deb binary form to download. You can also use the given commands instead
 
-> sudo apt install wget -y
+    sudo apt install wget -y
 
 ![Laravel RealWorld Example App](images/m1.png)
 
-> wget https://dev.mysql.com/get/mysql-apt-config_0.8.20-1_all.deb
+    wget https://dev.mysql.com/get/mysql-apt-config_0.8.20-1_all.deb
 
 ![Laravel RealWorld Example App](images/m2.png)
 
-> sudo apt install ./mysql-apt-config\_\*\_all.deb
+    sudo apt install ./mysql-apt-config\_\*\_all.deb
 
 ![Laravel RealWorld Example App](images/m3.png)
 
-> sudo apt update && sudo apt upgrade
+    sudo apt update && sudo apt upgrade
 
 ![Laravel RealWorld Example App](images/m5.png)
 
@@ -195,7 +195,7 @@ Configuration of MySQL repsotiory on Debian and on its [official community downl
 
     sudo apt-key adv --keyserver pgp.mit.edu --recv-keys 467B942D3A79BD29
 
-> sudo apt install mysql-server
+    sudo apt install mysql-server
 
 You will get option to select for what you want to add via the repository. Use the Arrow key, select **MySQL** Server & Cluster , then press the **TAB button** to select **OK** and hit then the **Enter key**
 
@@ -213,15 +213,15 @@ Again Select OK and then use the TAB to move to OK and hit the Enter key
 
 ![Laravel RealWorld Example App](images/m6.png)
 
-> mysql --version
+    mysql --version
 
-> sudo systemctl enable --now mysql
+    sudo systemctl enable --now mysql
 
-> sudo systemctl status mysql
+    sudo systemctl status mysql
 
 ![Laravel RealWorld Example App](images/m7-8.png)
 
-> sudo mysql_secure_installation
+    sudo mysql_secure_installation
 
 **Input the password you setup during the Installation of MySQL**
 
