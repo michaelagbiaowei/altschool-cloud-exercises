@@ -259,15 +259,15 @@ We then need to add the following context into the Laravel Configuration host fi
 
         ServerName mydomain.com
 
-        DocumentRoot /var/www/html/laravel-realword-example-app/public
+        DocumentRoot /var/www/html/laravel-realworld-example-app/public
 
-        <Directory /var/www/html/laravel-realword-example-app/public>
+        <Directory /var/www/html/laravel-realworld-example-app/public>
 
-            Options Indexes MultiViews
+        Options Indexes MultiViews
 
-            AllowOverride None
+        AllowOverride None
 
-            Require all granted
+        Require all granted
 
         </Directory>
 
