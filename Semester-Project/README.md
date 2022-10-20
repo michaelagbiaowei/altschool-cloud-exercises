@@ -131,7 +131,7 @@ The system needs to verify the packages we receive to install PHP 8.0 from the S
 
 ![Laravel RealWorld Example App](images/php3.png)
 
-## **Intsall php**
+## **Install php**
 
 We can go for the installation of php and the required extensions as per your web application requirements.
 
