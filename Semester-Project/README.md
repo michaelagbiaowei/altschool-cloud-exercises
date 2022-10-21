@@ -165,7 +165,7 @@ We can go for the installation of php and the required extensions as per your we
 
 - php8.1-bcmath - used when working with precision floats
 
-! [source] (https://www.digitalocean.com/community/tutorials/how-to-install-php-8-1-and-set-up-a-local-development-environment-on-ubuntu-22-04)
+![source] (https://www.digitalocean.com/community/tutorials/how-to-install-php-8-1-and-set-up-a-local-development-environment-on-ubuntu-22-04)
 
     $ php -v
 
