@@ -179,7 +179,7 @@ We can go for the installation of php and the required extensions as per your we
 
 ## **Download MySQL repository Debian package**
 
-Configuration of MySQL repsotiory on Debian and on its [official community download page] (https://dev.mysql.com/downloads/repo/apt/) and there you will get the latest Apt repsotiory in the deb binary form to download. You can also use the given commands instead
+Configuration of MySQL repsotiory on Debian and on its <a href="https://dev.mysql.com/downloads/repo/apt/">Offical Community Download Page</a> and there you will get the latest Apt repsotiory in the deb binary form to download. You can also use the given commands instead
 
     $ sudo apt install wget -y
 
