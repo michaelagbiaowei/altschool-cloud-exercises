@@ -213,7 +213,11 @@ Again Select OK and then use the TAB to move to OK and hit the Enter key
 
 ![Laravel RealWorld Example App](images/mc3.png)
 
-// SET YOUR PASSWORD
+## **Installation of MySQL-Server**
+
+During the installation process, it will prompt us to SET A PASSWORD FOR THE ROOT USER, make sure to enter a strong password and Hit the **ENTER KEY**
+
+Next it the again prompt us to re-enter our password, after this has been done, Hit the **ENTER KEY** again to exit
 
 sudo apt install mysql-server
 
