@@ -36,7 +36,7 @@ We will be using Debain 11 on a virtual machine instance with Amazon Web Service
 
 Update the Package Installer
 
-    sudo apt update && sudo apt upgrade -y
+  $  sudo apt update && sudo apt upgrade -y
 
 **When prompt, keep the local version currently installed and Hit the Enter Key**
 
