@@ -36,7 +36,7 @@ We will be using Debain 11 on a virtual machine instance with Amazon Web Service
 
 Update the Package Installer
 
-  $ sudo apt update && sudo apt upgrade -y
+    $ sudo apt update && sudo apt upgrade -y
 
 **When prompt, keep the local version currently installed and Hit the Enter Key**
 
@@ -44,13 +44,13 @@ Update the Package Installer
 
 This command will help to download & install Git directly at the AWS server. First, it will download the Git & then it will start installing on the server. It will take time.
 
-    sudo apt install git -y
+    $ sudo apt install git -y
 
 ![Laravel RealWorld Example App](images/git.png)
 
 After installation is completed, the below command will prompt the installed version of Git in the AWS server. Hence, the installation is completed
 
-    git --version
+    $ git --version
 
 ![Laravel RealWorld Example App](images/gitversion.png)
 
@@ -62,19 +62,19 @@ Apache Webserver is the **A** in the **LAMP** stack. We can run the following co
 
 This will install the Apache webserver package and start the Apache web service automatically
 
-    sudo apt install apache2
+    $ sudo apt install apache2
 
 ![Laravel RealWorld Example App](images/apache2.png)
 
 Next, Confirm that the Apache2 Service is Started and Enabled
 
-    sudo apache2 -v
+    $ sudo apache2 -v
 
-    sudo systemctl enable apache2
+    $ sudo systemctl enable apache2
 
-    sudo systemctl start apache2
+    $ sudo systemctl start apache2
 
-    sudo systemctl start apache2
+    $ sudo systemctl start apache2
 
 ![Laravel RealWorld Example App](images/apv.png)
 
@@ -84,19 +84,19 @@ Next, Confirm that the Apache2 Service is Started and Enabled
 
 Chance directory to **/var/www/html**
 
-    cd /var/www/html
+    $ cd /var/www/html
 
 ![Laravel RealWorld Example App](images/html.png)
 
 Next we will clone the Laravel Project int the present working direcctory
 
-    sudo git clone https://github.com/michaelagbiaowei/laravel-realworld-example-app.git
+    $ sudo git clone https://github.com/michaelagbiaowei/laravel-realworld-example-app.git
 
 ![Laravel RealWorld Example App](images/clone.png)
 
 Lastly, change directory into the Laravel Project
 
-    cd /var/www/html/laravel-realworld-example-app
+    $ cd /var/www/html/laravel-realworld-example-app
 
 ![Laravel RealWorld Example App](images/cd.png)
 
@@ -108,12 +108,12 @@ Lastly, change directory into the Laravel Project
 
 The packages to install PHP 8.1 on Debian 11 are not available in the default base repository, hence we have to add the SURY repository manually. The below given is a single command, **COPY THE ENTIRE COMMAND AT ONCE** and paste it in your terminal. And hit the Enter key
 
-    echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main"\
-        | sudo tee /etc/apt/sources.list.d/sury-php.list
+    $ echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main"\
+          | sudo tee /etc/apt/sources.list.d/sury-php.list
 
 ![Laravel RealWorld Example App](images/php1.png)
 
-    sudo apt install gnupg gnupg2
+    $ sudo apt install gnupg gnupg2
 
 ![Laravel RealWorld Example App](images/gu.png)
 
@@ -121,13 +121,13 @@ The packages to install PHP 8.1 on Debian 11 are not available in the default ba
 
 The system needs to verify the packages we receive to install PHP 8.0 from the Sury repository, to confirm they have not been altered by anyone
 
-    wget -qO - https://packages.sury.org/php/apt.gpg | sudo apt-key add -
+    $ wget -qO - https://packages.sury.org/php/apt.gpg | sudo apt-key add -
 
 ![Laravel RealWorld Example App](images/php2.png)
 
 ## **Run system update**
 
-    sudo apt update && sudo apt upgrade -y
+    $ sudo apt update && sudo apt upgrade -y
 
 ![Laravel RealWorld Example App](images/php3.png)
 
@@ -135,19 +135,19 @@ The system needs to verify the packages we receive to install PHP 8.0 from the S
 
 We can go for the installation of php and the required extensions as per your web application requirements.
 
-    sudo apt-get install php8.1 libapache2-mod-php php8.1-dev php8.1-zip php8.1-curl php8.1-mbstring php8.1-mysql php8.1-gd php8.1-xml
+    $ sudo apt-get install php8.1 libapache2-mod-php php8.1-dev php8.1-zip php8.1-curl php8.1-mbstring php8.1-mysql php8.1-gd php8.1-xml
 
 ![Laravel RealWorld Example App](images/php4.png)
 
 **if error occurs...   Confirm your PUBLIC_KEY from your ERROR MESSEGAE and ...run**
 
-        sudo gpg --keyserver pgpkeys.mit.edu --recv-key B188E2B695BD4743
+        $ sudo gpg --keyserver pgpkeys.mit.edu --recv-key B188E2B695BD4743
 
-        sudo wget -qO - https://packages.sury.org/php/apt.gpg | sudo apt-key add -
+        $ sudo wget -qO - https://packages.sury.org/php/apt.gpg | sudo apt-key add -
         
     Re-run the php installation command
         
-        sudo apt-get install php8.1 libapache2-mod-php php8.1-dev php8.1-zip php8.1-curl php8.1-mbstring php8.1-mysql php8.1-gd php8.1-xml
+        $ sudo apt-get install php8.1 libapache2-mod-php php8.1-dev php8.1-zip php8.1-curl php8.1-mbstring php8.1-mysql php8.1-gd php8.1-xml
 
 - php8.1-cli - command interpreter, useful for testing PHP scripts from a shell or performing general shell scripting tasks
 - php8.1-common - documentation, examples, and common modules for PHP
@@ -167,7 +167,7 @@ We can go for the installation of php and the required extensions as per your we
 
 [source] (https://www.digitalocean.com/community/tutorials/how-to-install-php-8-1-and-set-up-a-local-development-environment-on-ubuntu-22-04)
 
-    php -v
+    $ php -v
 
 ![Laravel RealWorld Example App](images/php5.png)
 
@@ -179,27 +179,27 @@ We can go for the installation of php and the required extensions as per your we
 
 Configuration of MySQL repsotiory on Debian and on its [official community download page] (https://dev.mysql.com/downloads/repo/apt/) and there you will get the latest Apt repsotiory in the deb binary form to download. You can also use the given commands instead
 
-    sudo apt install wget -y
+    $ sudo apt install wget -y
 
 ![Laravel RealWorld Example App](images/m1.png)
 
-    wget https://dev.mysql.com/get/mysql-apt-config_0.8.20-1_all.deb
+    $ wget https://dev.mysql.com/get/mysql-apt-config_0.8.20-1_all.deb
 
 ![Laravel RealWorld Example App](images/m2.png)
 
-    sudo apt install ./mysql-apt-config_*_all.deb
+    $ sudo apt install ./mysql-apt-config_*_all.deb
 
 ![Laravel RealWorld Example App](images/m3.png)
 
-    sudo apt update && sudo apt upgrade
+    $ sudo apt update && sudo apt upgrade
 
 ![Laravel RealWorld Example App](images/m5.png)
 
 **if error occurs... Confirm your PUBLIC_KEY from your ERROR MESSEGAE ...and run the following commands**
 
-    sudo apt-key adv --keyserver pgp.mit.edu --recv-keys 467B942D3A79BD29
+    $ sudo apt-key adv --keyserver pgp.mit.edu --recv-keys 467B942D3A79BD29
 
-    sudo apt update && sudo apt upgrade -y
+    $ sudo apt update && sudo apt upgrade -y
 
 You will get option to select for what you want to add via the repository. Use the Arrow key, select **MySQL** Server & Cluster , then press the **TAB button** to select **OK** and hit then the **Enter key**
 
@@ -223,15 +223,15 @@ sudo apt install mysql-server
 
 ![Laravel RealWorld Example App](images/m6.png)
 
-    mysql --version
+    $ mysql --version
 
-    sudo systemctl enable --now mysql
+    $ sudo systemctl enable --now mysql
 
-    sudo systemctl status mysql
+    $ sudo systemctl status mysql
 
 ![Laravel RealWorld Example App](images/m7-8.png)
 
-    sudo mysql_secure_installation
+    $ sudo mysql_secure_installation
 
 **Input the password you setup during the Installation of MySQL**
 
@@ -259,7 +259,7 @@ It may also prompt to reload privilege tables now This is always a good idea, so
 
 We will create an Apache virtual host configuration file to host our Laravel application.
 
-    sudo nano /etc/apache2/sites-available/laravel.conf
+    $ sudo nano /etc/apache2/sites-available/laravel.conf
 
 We then need to add the following context into the Laravel Configuration host file:
 
@@ -289,13 +289,13 @@ We then need to add the following context into the Laravel Configuration host fi
 
 We can now save and close the file and then enable the Apache rewrite module and activate the Laravel virtual host
 
-    sudo a2enmod rewrite
+    $ sudo a2enmod rewrite
 
-    sudo a2ensite laravel.conf
+    $ sudo a2ensite laravel.conf
 
 Reload the Apache service to apply the changes
 
-    sudo systemctl restart apache2
+    $ sudo systemctl restart apache2
 
 ## **Step Eight**
 
@@ -303,7 +303,7 @@ Reload the Apache service to apply the changes
 
 In your terminal, open the php.ini file with nano
 
-    sudo nano /etc/php/8.1/apache2/php.ini
+    $ sudo nano /etc/php/8.1/apache2/php.ini
 
 The line we need to edit is **cgi.fix_pathinfo=0** so you can either search for it manually, or you can search for it using **Ctrl+W**
 
@@ -315,7 +315,7 @@ To save something in Nano, just press **Ctrl+X** and **type Y** and then press E
 
 Restart the Apache service to apply changes
 
-    sudo systemctl restart apache2
+    $ sudo systemctl restart apache2
 
 ## **Step Nine**
 
@@ -327,31 +327,31 @@ Run the following commands to install Composer
 
 To install Composer, download the installer first with the following curl command
 
-    curl -sS https://getcomposer.org/installer -o /tmp/composer-setup.php
+    $ curl -sS https://getcomposer.org/installer -o /tmp/composer-setup.php
 
 To facilitate the verification step, you can use the following command to programmatically obtain the latest hash from the Composer page and store it in a shell variable
 
-    HASH=`curl -sS https://composer.github.io/installer.sig`
+    $ HASH=`curl -sS https://composer.github.io/installer.sig`
 
 To verify the obtained value, you can run
 
-    echo $HASH
+    $ echo $HASH
 
 Now execute the following PHP code, as provided in the Composer download page, to verify that the installation script is safe to run
 
-    php -r "if (hash_file('SHA384', '/tmp/composer-setup.php') === '$HASH') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
+    $ php -r "if (hash_file('SHA384', '/tmp/composer-setup.php') === '$HASH') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
 
 If the output says Installer corrupt, you’ll need to download the installation script again and double check that you’re using the correct hash. Then, repeat the verification process. When you have a verified installer, you can continue.
 
 To install composer globally, use the following command which will download and install Composer as a system-wide command named composer, under /usr/local/bin
 
-    sudo php /tmp/composer-setup.php --install-dir=/usr/local/bin --filename=composer
+    $ sudo php /tmp/composer-setup.php --install-dir=/usr/local/bin --filename=composer
 
 ![Laravel RealWorld Example App](images/cc.png)
 
 To test your installation, with the given command
 
-    composer
+    $ composer
 
 ![Laravel RealWorld Example App](images/ccc.png)
 
@@ -363,7 +363,7 @@ We can use composer to install the laravel dependencies
 
 We use the –no-dev flag to install only the dependencies that are required in production
 
-    sudo composer install --no-dev
+    $ sudo composer install --no-dev
 
 ![Laravel RealWorld Example App](images/cc2.png)
 
@@ -373,13 +373,13 @@ We use the –no-dev flag to install only the dependencies that are required in 
 
 In order to run, Apache needs certain permissions over the Laravel directory we made. We must first give our web group control of the Laravel-realworld-example-app directory
 
-    sudo chown -R :www-data /var/www/html/laravel-realworld-example-app
+    $ sudo chown -R :www-data /var/www/html/laravel-realworld-example-app
 
-    sudo chmod -R 775 /var/www/html/laravel-realworld-example-app
+    $ sudo chmod -R 775 /var/www/html/laravel-realworld-example-app
 
-    sudo chmod -R 775 /var/www/html/laravel-realworld-example-app/storage
+    $ sudo chmod -R 775 /var/www/html/laravel-realworld-example-app/storage
 
-    sudo chmod -R 775 /var/www/html/laravel-realworld-example-app/bootstrap/cache
+    $ sudo chmod -R 775 /var/www/html/laravel-realworld-example-app/bootstrap/cache
 
 ![Laravel RealWorld Example App](images/pp.png)
 
@@ -391,9 +391,9 @@ In order to run, Apache needs certain permissions over the Laravel directory we 
 
 We can finish the Laravel installation by running the following commands
 
-    sudo cp .env.example .env
+    $ sudo cp .env.example .env
 
-    sudo php artisan key:generate
+    $ sudo php artisan key:generate
 
 ## **Step Thirteen**
 
@@ -403,7 +403,7 @@ We can now create a database to store our application data in it. We can set up 
 
 Let’s start by executing the following command into MySQL
 
-    mysql -u root -p
+    $ mysql -u root -p
 
 Copy and paste the following context
 
@@ -419,7 +419,7 @@ We can start by adding the database credentials to the **.env** file we had gene
 
 **NOTE::: APP_KEY=base64 should be left untouched**
 
-    sudo nano .env
+    $ sudo nano .env
 
 We can also set the APP_ENV Key to production since our application is in production and also turn the APP_DEBUG key to false. This ensures that no debug and stack trace messages are displayed to the general public
 
@@ -427,35 +427,35 @@ We can also set the APP_ENV Key to production since our application is in produc
 
 We have to uncomment our web.php context in other to migrate our data
 
-    sudo nano routes/web.php
+    $ sudo nano routes/web.php
 
 ![Laravel RealWorld Example App](images/web.php.png)
 
 We can now cache our configurations using the command
 
-    sudo php artisan config:cache
+    $ sudo php artisan config:cache
 
 ![Laravel RealWorld Example App](images/ca.png)
 
 Disable default Apache2 configuration
 
-    sudo a2dissite 000-default.conf
+    $ sudo a2dissite 000-default.conf
 
 Delete default Apache2 configuration
 
-    sudo rm /etc/apache2/sites-available/000-default.conf
+    $ sudo rm /etc/apache2/sites-available/000-default.conf
 
 Enable Laravel Host configuration
 
-    sudo a2ensite laravel.conf
+    $ sudo a2ensite laravel.conf
 
 Restart Apache2 server
 
-    sudo systemctl status apache2
+    $ sudo systemctl status apache2
 
 The last thing in the Laravel setup is migrating the database
 
-    sudo php artisan migrate
+    $ sudo php artisan migrate
 
 ![Laravel RealWorld Example App](images/migration.png)
 
