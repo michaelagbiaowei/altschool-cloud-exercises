@@ -463,4 +463,6 @@ The last thing in the Laravel setup is migrating the database
 
 At this point, we can now access our laravel application through the URL https://AWS-public-ip
 
+<img align= "center" alt="Coding" src="https://miro.medium.com/max/640/1*HPsRQtgOrzT062IZiKf-2Q.gif">
+
 ![Laravel RealWorld Example App](images/laravelRenderedPageWIthPublic-IP.png)
