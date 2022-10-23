@@ -265,7 +265,7 @@ We will create an Apache virtual host configuration file to host our Laravel app
 
 We then need to add the following context into the Laravel Configuration host file:
 
-    <VirtualHost \*:80>
+    <VirtualHost *:80>
 
         ServerAdmin admin@example.com
 
