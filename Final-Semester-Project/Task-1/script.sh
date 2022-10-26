@@ -15,7 +15,7 @@
 # variables
 # =========
 
-github_token="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+github_token="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" // Set up a PERSONAL ACCESS TOKEN on github
 git_user="github_username"
 git_repo="github_reop"
 git_path="./${git_repo}/Final-Semester-Project"
