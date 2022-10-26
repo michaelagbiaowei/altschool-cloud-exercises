@@ -27,9 +27,10 @@ inventory_path="/home/ec2-user/inventory.txt"
 # ==================================
 Hostname="slave_IP"
 IdentityFile="/home/ec2-user/.ssh/new"
+User="${ansible_user}"
 # ==================================
 server_name="slave"
-ansible_host="slave_IP"
+ansible_host="${Hostname}"
 ansible_connection="ssh"
 ansible_user="admin"
 
