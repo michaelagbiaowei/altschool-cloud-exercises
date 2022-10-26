@@ -17,8 +17,8 @@
 # =========
 
 token="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
-git_user="michaelagbiaowei"
-git_repo="altschool-cloud-exercises"
+git_user="github_username"
+git_repo="github_reop"
 git_path="./${git_repo}/Final-Semester-Project"
 host_file="/etc/ansible/hosts"
 # ===================================
