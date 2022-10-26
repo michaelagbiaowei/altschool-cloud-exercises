@@ -8,8 +8,10 @@
 # SSH-KEYGEN
 # ==========
 
-# ssh-keygen -t rsa -N // To be executed
 
+
+# ssh-keygen -t rsa -N // To be executed
+# Copy ssh private key to slave (APPEND ON (/home/admin/.ssh/authorized_keys))
 # =========
 # variables
 # =========
