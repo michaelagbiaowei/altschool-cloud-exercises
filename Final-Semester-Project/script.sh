@@ -90,5 +90,3 @@ sudo echo "${server_name} ansible_host=${ansible_host} ansible_connection=${ansi
 # Executing the inventory.txt
 
 # ansible slave -m ping -i inventory.txt -v // To be executed
-
-echo "DONE!!!"
