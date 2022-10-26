@@ -15,7 +15,7 @@
 # variables
 # =========
 
-token="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+github_token="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 git_user="github_username"
 git_repo="github_reop"
 git_path="./${git_repo}/Final-Semester-Project"
@@ -63,7 +63,7 @@ sudo git --version
 
 # Clone git repository into Ansible server
 
-git clone https://${token}@github.com/${git_user}/${git_repo}.git
+git clone https://${github_token}@github.com/${git_user}/${git_repo}.git
 
 # Make working directory in working repository
 
