@@ -8,7 +8,7 @@
 # SSH-KEYGEN
 # ==========
 
-# ssh-keygen -t rsa -N // To be executed
+# ssh-keygen -t rsa -N // To be executed First (separately) on the terminal
 # Copy ssh private key to slave (APPEND ON (/home/admin/.ssh/authorized_keys))
 
 # =========
