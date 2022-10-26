@@ -30,7 +30,7 @@ Hostname="slave_IP"
 IdentityFile="/home/ec2-user/.ssh/new"
 User="${ansible_user}"
 # ==================================
-server_name="slave"
+server_name="slave_name"
 ansible_host="${Hostname}"
 ansible_connection="ssh"
 ansible_user="admin"
