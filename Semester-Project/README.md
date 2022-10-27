@@ -221,7 +221,7 @@ During the installation process, it will prompt us to SET A PASSWORD FOR THE ROO
 
 Next it the again prompt us to re-enter our password, after this has been done, Hit the **ENTER KEY** again to exit
 
-sudo apt install mysql-server
+    $ sudo apt install mysql-server
 
 ![Laravel RealWorld Example App](images/m6.png)
 
