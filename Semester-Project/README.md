@@ -185,7 +185,7 @@ Configuration of MySQL repsotiory on Debian and on its <a href="https://dev.mysq
 
 ![Laravel RealWorld Example App](images/m1.png)
 
-    $ wget https://dev.mysql.com/get/mysql-apt-config_0.8.20-1_all.deb
+    $ sudo wget https://dev.mysql.com/get/mysql-apt-config_0.8.20-1_all.deb
 
 ![Laravel RealWorld Example App](images/m2.png)
 
