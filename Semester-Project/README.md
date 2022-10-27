@@ -74,7 +74,7 @@ Next, Confirm that the Apache2 Service is Started and Enabled
 
     $ sudo systemctl start apache2
 
-    $ sudo systemctl start apache2
+    $ sudo systemctl status apache2
 
 ![Laravel RealWorld Example App](images/apv.png)
 
