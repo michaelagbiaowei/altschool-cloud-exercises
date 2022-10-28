@@ -42,7 +42,7 @@ Update the Package Installer
 
 ![Laravel RealWorld Example App](images/update.png)
 
-This command will help to download & install Git directly at the AWS server. First, it will download the Git & then it will start installing on the server. It will take time.
+This command will help to download & install Git directly at the AWS server. First, it will download the Git & then it will start installing on the server.
 
     $ sudo apt install git -y
 
@@ -461,7 +461,7 @@ Restart Apache2 server
 
 ![Laravel RealWorld Example App](images/migration.png)
 
-At this point, we can now access our laravel application through the URL https://AWS-public-ip
+At this point, we can now access our laravel application through the URL http://AWS-public-ip
 
 <img align= "center" alt="Coding" src="https://miro.medium.com/max/640/1*HPsRQtgOrzT062IZiKf-2Q.gif">
 
