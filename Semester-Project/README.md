@@ -451,13 +451,11 @@ Enable Laravel Host configuration
 
     $ sudo a2ensite laravel.conf
 
-Restart Apache2 server
-
-    $ sudo systemctl status apache2
-
 The last thing in the Laravel setup is migrating the database
 
     $ sudo php artisan migrate
+    
+Restart Apache2 server
     
     $ sudo systemctl restart apache2
 
