@@ -458,6 +458,8 @@ Restart Apache2 server
 The last thing in the Laravel setup is migrating the database
 
     $ sudo php artisan migrate
+    
+    $ sudo systemctl restart apache2
 
 ![Laravel RealWorld Example App](images/migration.png)
 
