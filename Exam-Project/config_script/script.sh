@@ -16,7 +16,7 @@
 # =========
 
 # // Set up a PERSONAL ACCESS TOKEN on github //
-github_token="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" 
+github_token="xxxxxxxxxxxxxxxxxxxxxx" 
 git_user="michaelagbiaowei"
 git_repo="altschool-cloud-exercises"
 git_path="./${git_repo}/Exam-Project"
