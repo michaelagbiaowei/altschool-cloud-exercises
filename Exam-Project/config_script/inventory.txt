@@ -1,0 +1,1 @@
+slave ansible_host=54.152.193.179 ansible_connection=ssh ansible_user=

@@ -16,22 +16,22 @@
 # =========
 
 # // Set up a PERSONAL ACCESS TOKEN on github //
-github_token="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" 
-git_user="github_username"
-git_repo="github_reop"
-git_path="./${git_repo}/Final-Semester-Project"
+github_token="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" 
+git_user="michaelagbiaowei"
+git_repo="altschool-cloud-exercises"
+git_path="./${git_repo}/Exam-Project"
 host_file="/etc/ansible/hosts"
 # ===================================
 home_path="/home/ec2-user"
-.ssh_path="/home/ec2-user/.ssh"
-config_path="/home/ec2-user/.ssh/config"
-inventory_path="/home/ec2-user/inventory.txt"
+.ssh_path="${home_path}/.ssh"
+config_path="${home_path}/.ssh/config"
+inventory_path="${home_path}/inventory.txt"
 # ==================================
-Hostname="slave_IP"
-IdentityFile="/home/ec2-user/.ssh/new"
+Hostname="54.152.193.179"
+IdentityFile="${home_path}/.ssh/new"
 User="${ansible_user}"
 # ==================================
-server_name="slave_name"
+server_name="slave"
 ansible_host="${Hostname}"
 ansible_connection="ssh"
 ansible_user="admin"

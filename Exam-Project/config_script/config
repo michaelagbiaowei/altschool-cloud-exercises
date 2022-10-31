@@ -1,0 +1,3 @@
+Hostname 54.152.193.179
+IdentityFile /home/ec2-user/.ssh/new
+User admin
