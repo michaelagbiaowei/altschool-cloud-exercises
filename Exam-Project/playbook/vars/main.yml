@@ -1,0 +1,10 @@
+---
+# vars file for playbook
+
+apache2_version: 2.4.41
+
+path_to_file: "/var/www/laravel-realworld-example-app"
+
+PWD: "/var/www/"
+
+git_repo_url: "https://github.com/michaelagbiaowei/laravel-realworld-example-app.git"

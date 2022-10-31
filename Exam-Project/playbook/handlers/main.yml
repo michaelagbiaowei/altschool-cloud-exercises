@@ -1,0 +1,8 @@
+---
+# handlers file for playbook
+
+- name: start apache2 server
+  service:
+    name: apache2
+    enabled: yes
+    stated: stated
