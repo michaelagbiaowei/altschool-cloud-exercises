@@ -1,0 +1,55 @@
+---
+# tasks file for git_repo
+
+- name: update slave server
+  command: apt update
+
+- name: install git and git dependencies
+  apt:
+    name: git
+    state: present
+
+- name: print git version
+  debug:
+    msg: "The current version of git is {{git_version}}"
+
+- name: Clone a github repository
+  git: >
+    dest: "{{PWD}}"
+    repo: "{{git_repo_url}}"
+    clone: yes
+    update: no
+    version: master
+    accept_hostkey: yes
+
+- name: set least privillages for laravel www-data
+  file:
+    path: "{{path_to_file}}"
+    state: directory
+    sudo_user: www-data
+    recursive: yes
+    become: true
+
+- name: set least privillages for laravel
+  file:
+    path: "{{path_to_file}}"
+    state: directory
+    mode: 775
+    recursive: yes
+    become: true
+
+- name: set least privillages for laravel/storage
+  file:
+    path: "{{path_to_file}}/storage"
+    state: directory
+    mode: 775
+    recursive: yes
+    become: true
+
+- name: set least privillages for laravel/bootstrap/cache
+  file:
+    path: "{{path_to_file}}/bootstrap/cache"
+    state: directory
+    mode: 775
+    recursive: yes
+    become: true

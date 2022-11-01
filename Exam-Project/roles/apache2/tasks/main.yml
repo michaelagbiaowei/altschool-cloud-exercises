@@ -1,0 +1,14 @@
+---
+# tasks file for apache2
+
+- name: update slave server
+  command: apt update
+
+- name: install apache2
+  apt:
+    name: apache2
+    state: installed
+
+- name: pint apache2 version
+  debug:
+    msg: "The current version of apache2 is {{apache2_version}}"

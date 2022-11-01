@@ -1,0 +1,4 @@
+---
+# vars file for apache2
+
+apache2_version: 2.2.58

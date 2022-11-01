@@ -1,0 +1,22 @@
+---
+# tasks file for composer
+
+- name: download the installer
+  shell: curl -sS https://getcomposer.org/installer -o /tmp/composer-setup.php
+  args:
+    creates: /usr/local/bin/composer
+
+- name: facilitate the verification step
+  shell: HASH=`curl -sS https://composer.github.io/installer.sig`
+
+- name: verify the obtained value
+  shell: sh -c "echo $HASH"
+
+- name: verify that the installation script is safe to run
+  shell: php -r "if (hash_file('SHA384', '/tmp/composer-setup.php') === '$HASH') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
+
+- name: install Composer as a system-wide command
+  shell: php /tmp/composer-setup.php --install-dir=/usr/local/bin --filename=composer
+
+- name: test installation
+  shell: composer

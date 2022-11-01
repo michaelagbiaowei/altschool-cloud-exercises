@@ -1,0 +1,12 @@
+---
+# vars file for group_vars
+
+git_version: 2.30.2
+
+PWD: /var/www/
+
+git_repo_url: https://github.com/michaelagbiaowei/laravel-realworld-example-app
+
+path_to_file: /var/www/laravel-realworld-example-app
+
+

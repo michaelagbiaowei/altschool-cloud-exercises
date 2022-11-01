@@ -1,0 +1,47 @@
+---
+# tasks file for mysql_config
+
+- name: update
+  command: apt update
+
+- name: Install MySQL
+  apt: name={{item}} state=installed
+  with_items:
+    - mysql-server-8.0
+    - python-mysqldb
+
+- name: set password
+  mysql_user:
+    name: root
+    password: "{{mysql_root_password}}"
+    login_unix_socket: /var/run/mysql/mysqld.sock
+  no_log: true
+
+- name: remove all anonymous user
+  mysql_user:
+    name: ""
+    host_all: yes
+    state: absent
+    login_unix_socket: /var/run/mysql/mysqld.sock
+  no_log: true
+
+- name: remove mysql test database
+  mysql_db:
+    name: test
+    state: absent
+    login_unix_socket: /var/run/mysql/mysqld.sock
+
+- name: create app_mysql db
+  mysql_db:
+    name: "{{mysql_app_db}}"
+    state: present
+    login_unix_socket: /var/run/mysql/mysqld.sock
+
+- name: create mysql user and grant access to db
+  mysql_user:
+    name: "{{mysql_user}}"
+    password: "{{mysql_app_pass}}"
+    priv: "{{mysql_app_db}}.*:ALL"
+    state: present
+    login_unix_socket: /var/run/mysql/mysqld.sock
+  no_log: true

@@ -1,0 +1,4 @@
+---
+# vars file for git_repo
+
+git_version: 2.30.2

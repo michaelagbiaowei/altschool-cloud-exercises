@@ -1,0 +1,9 @@
+- name: deploy
+  become: true
+  hosts: laravel-host
+  roles:
+    - git_repo
+    - apache2
+    - php_config
+    - mysql_config
+    - composer
