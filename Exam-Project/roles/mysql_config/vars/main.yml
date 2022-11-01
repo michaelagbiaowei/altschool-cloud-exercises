@@ -1,10 +1,10 @@
 ---
 # vars file for mysql_config
 
-mysql_root_password: Ifiekemi1990
+mysql_root_password: ********
 
 mysql_db: laraveldatabase
 
-mysql_app_pass: Ifiekemi1990
+mysql_app_pass: ********
 
 mysql_user: michael
