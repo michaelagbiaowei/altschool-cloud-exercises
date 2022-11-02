@@ -24,7 +24,7 @@
 - name: copy .env to slave
   template:
     src: ".env.j2"
-    dest: "{{path_to_file}}/.env"
+    dest: "{{path_to_env}}"
     
 - name: copy web.php to slave
   template:
