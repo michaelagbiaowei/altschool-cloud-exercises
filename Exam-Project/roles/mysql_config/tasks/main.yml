@@ -4,11 +4,17 @@
 - name: update
   command: apt update
 
-- name: Install MySQL
-  apt: name={{item}} state=installed
-  with_items:
-    - mysql-server-8.0
-    - python-mysqldb
+# - name: Install MySQL
+#   apt: name={{item}} state=installed
+#   with_items:
+#     - mysql-server-8.0
+#     - python-mysqldb
+
+- name: install mysql
+  apt: name="{{mysql_apt}}" state=latest
+
+- name: mysql verson
+  command: mysql --version
 
 - name: set password
   mysql_user:
