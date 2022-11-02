@@ -32,7 +32,7 @@
     dest: "{{path_to_file}}/routes/web.php"
     
 - name: Install Composer dependencies
-  shell: {{path_to_file}} composer install --no-scripts --no-dev
+  shell: "{{path_to_file}} composer install --no-scripts --no-dev"
 
 - name: "generate atisan app key"
   shell: "{{php_artisan}}/php artisan key:generate"
