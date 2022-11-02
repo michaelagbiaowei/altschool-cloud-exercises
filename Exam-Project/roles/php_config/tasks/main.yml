@@ -20,7 +20,7 @@
   apt: update_cache=yes cache_valid_time=3600
 
 - name: install php8.1
-  apt: name=["{{php_apt}}"] state=present
+  apt: name="{{php_apt}}" state=present
 
 - name: ensure php8.1-fpm cgi.fix_pathinfo=0
   lineinfile: dest={{path_php_ini}}} regexp='^(.*)cgi.fix_pathinfo=' line=cgi.fix_pathinfo=0
