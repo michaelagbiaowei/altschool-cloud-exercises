@@ -14,7 +14,7 @@
   shell: wget -qO - https://packages.sury.org/php/apt.gpg | sudo apt-key add -
   
 - name: install php
-  command: apt install $ sudo apt-get install php8.1 libapache2-mod-php php8.1-dev php8.1-zip php8.1-curl php8.1-mbstring php8.1-mysql php8.1-gd php8.1-xml -php8.1-fpm php8.1-bcmaty -y 
+  command: apt install $ sudo apt-get install php8.1 libapache2-mod-php php8.1-dev php8.1-zip php8.1-curl php8.1-mbstring php8.1-mysql php8.1-gd php8.1-xml php8.1-fpm php8.1-bcmaty -y 
   
 # - name: Add Public key
 #   shell: gpg --keyserver pgpkeys.mit.edu --recv-key B188E2B695BD4743
