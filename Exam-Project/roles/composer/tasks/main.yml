@@ -21,16 +21,11 @@
 # - name: test installation
 #   shell: composer
 
-- name: copy .env
-  file:
-    path: "{{path_to_file}}/.env.example"
-    dest: "{{path_to_file}}/.env"
-    state: file
-
 - name: copy .env to slave
   template:
     src: ".env.j2"
     dest: "{{path_to_file}}/.env"
+    state: present
     
 - name: copy web.php to slave
   template:
