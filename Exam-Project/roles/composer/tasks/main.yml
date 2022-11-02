@@ -31,8 +31,14 @@
     src: "web.php.j2"
     dest: "{{path_to_file}}/routes/web.php"
     
-- name: Install Composer dependencies
-  shell: "{{path_to_file}} composer install --no-scripts --no-dev"
+- name: install composer
+  composer:
+    command: install
+    working_dir: "{{path_to_file}}"
+  become: false
+  tags: ['composer:install']
+# - name: Install Composer dependencies
+#   shell: "{{path_to_file}} composer install --no-scripts --no-dev"
 
 - name: "generate atisan app key"
   shell: "{{php_artisan}}/php artisan key:generate"
