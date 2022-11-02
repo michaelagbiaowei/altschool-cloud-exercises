@@ -39,15 +39,15 @@
 
 - name: create app_mysql db
   mysql_db:
-    name: "{{mysql_app_db}}"
+    name: "{{mysql_db}}"
     state: present
     login_unix_socket: /var/run/mysql/mysqld.sock
 
 - name: create mysql user and grant access to db
   mysql_user:
     name: "{{mysql_user}}"
-    password: "{{mysql_app_pass}}"
-    priv: "{{mysql_app_db}}.*:ALL"
+    password: "{{mysql_pass}}"
+    priv: "{{mysql_db}}.*:ALL"
     state: present
     login_unix_socket: /var/run/mysql/mysqld.sock
   no_log: true
