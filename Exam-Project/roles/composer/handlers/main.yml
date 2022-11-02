@@ -1,2 +1,18 @@
 ---
 # handlers file for composer
+
+- name: disable 000-default.conf
+  file:
+    path: "{{path_to_vhost}}/000-default.conf"
+    state: absent
+
+- name: enable laravel.conf
+  file:
+    path: "{{path_to_vhost}}/laravel.conf"
+    dest:  "/etc/apache2/sites-enabled/laravel.conf"
+    state: present
+    
+ - name: restart apache2
+   service:
+     name: apache2
+     state: restated
