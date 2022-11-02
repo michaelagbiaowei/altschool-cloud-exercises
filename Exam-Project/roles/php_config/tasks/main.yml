@@ -17,12 +17,11 @@
   apt: update_cache=yes cache_valid_time=3600
 
 - name: install php8.1
-#     apt: name={{item}} update_cache=yes
-  loop: "{{php_apt}}"
+#   loop: "{{php_apt}}"
   state: present
-#   apt: name={{item}} state=installed
-#   with_items:
-#     - php8.1
+  apt: name={{item}} state=installed
+  with_items:
+    - "{{php_apt}}"
 #     - libapache2-mod-php
 #     - php8.1-dev
 #     - php8.1-zip
