@@ -1,41 +1,28 @@
 ---
 # tasks file for mysql_config
 
-# - name: update
-#   command: apt update
+- name: update
+  command: apt update
 
-# - name: install mysql
-#   apt: name="{{mysql_apt}}" state=latest
+- name: install mysql
+  apt: name="{{mysql_apt}}" state=latest
 
-# - name: mysql verson
-#   command: mysql --version
-
- mysql_user:
-    login_user: mysql_admin
-    login_password: mysql_admin_password
-    name: demo
-    state: present
+- name: mysql verson
+  command: mysql --version
   
-# - name: Create database user with name 'root' and password '***' with all database privileges
-#   mysql_user:
-#     name: root
-#     password: Ifiekemi1990
-#     priv: '*.*:ALL'
-#     state: present
-#     login_unix_socket: /run/mysqld/mysqld.sock
+- name: Create database user with name 'root' and password '***' with all database privileges
+  mysql_user:
+    name: root
+    password: Ifiekemi1990
+    priv: '*.*:ALL'
+    state: present
+    login_unix_socket: /run/mysqld/mysqld.sock
     
 - name: Removes all anonymous user accounts
   mysql_user:
     name: ''
     host_all: yes
     state: absent
-
-- name: Removes anonymous user account for localhost
-  mysql_user:
-    name: ''
-    host: localhost
-    state: absent
-    login_unix_socket: /run/mysqld/mysqld.sock
 
 - name: remove mysql test database
   mysql_db:
