@@ -13,23 +13,14 @@
 - name: Download the signing key
   shell: wget -qO - https://packages.sury.org/php/apt.gpg | sudo apt-key add -
   
+- name: Add Public key
+  shell: gpg --keyserver pgpkeys.mit.edu --recv-key B188E2B695BD4743
+  
 - name: Update the apt cache
   apt: update_cache=yes cache_valid_time=3600
 
 - name: install php8.1
-#   name: "{{php_apt}}"
-#   state: present
-  apt: name=['{{php_apt}}'] state=present
-#   with_items:
-#     - "{{php_apt}}"
-#     - libapache2-mod-php
-#     - php8.1-dev
-#     - php8.1-zip
-#     - php8.1-curl
-#     - php8.1-mbstring
-#     - php8.1-mysql
-#     - php8.1-gd
-#     - php8.1-xml
+  apt: name=["{{php_apt}}"] state=present
 
 - name: ensure php8.1-fpm cgi.fix_pathinfo=0
   lineinfile: dest={{path_php_ini}}} regexp='^(.*)cgi.fix_pathinfo=' line=cgi.fix_pathinfo=0
