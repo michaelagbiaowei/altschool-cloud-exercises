@@ -18,17 +18,17 @@
     dest: "{{PWD}}"
     repo: "{{git_repo_url}}"
     
- - name: set least privillages for laravel www-data
-   command: chown -R :www-data "{{path_to_file}}"
+#  - name: set least privillages for laravel www-data
+#    command: chown -R :www-data "{{path_to_file}}"
 
-- name: set least privillages for laravel
-  command: chmod -R 775  "{{path_to_file}}""
+# - name: set least privillages for laravel
+#   command: chmod -R 775  "{{path_to_file}}""
 
-- name: et least privillages for laravel/storage
-  command: chmod -R 775  "{{path_to_file}}/storage"
+# - name: et least privillages for laravel/storage
+#   command: chmod -R 775  "{{path_to_file}}/storage"
 
-- name: set least privillages for laravel/bootstrap/cache
-  command: chmod -R 775  "{{path_to_file}}/bootstrap/cache"
+# - name: set least privillages for laravel/bootstrap/cache
+#   command: chmod -R 775  "{{path_to_file}}/bootstrap/cache"
 
 # - name: set least privillages for laravel www-data
 #   file:
