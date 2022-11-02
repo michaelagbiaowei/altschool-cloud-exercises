@@ -19,7 +19,7 @@
 - name: install php8.1
 #   name: "{{php_apt}}"
 #   state: present
-  apt: name=['{{php_apt}}'] state=installed
+  apt: name=['{{php_apt}}'] state=present
 #   with_items:
 #     - "{{php_apt}}"
 #     - libapache2-mod-php
