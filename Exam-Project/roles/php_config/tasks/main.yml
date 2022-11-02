@@ -15,7 +15,7 @@
 
 - name: install php8.1
   apt:
-    name: ['php8.1', 'libapache2-mod-php', 'php8.1-dev', 'php8.1-zip', 'php8.1-curl', 'php8.1-mbstring', 'php8.1-mysql', 'php8.1-gd', 'php8.1-xml', 'php8.1-fpm']
+    name: "{{php_apt}}"
     state: present
 #   apt: name={{item}} state=installed
 #   with_items:
