@@ -16,11 +16,16 @@
 # - name: Add Public key
 #   shell: gpg --keyserver pgpkeys.mit.edu --recv-key B188E2B695BD4743
   
-- name: Update the apt cache
-  apt: update_cache=yes cache_valid_time=3600
+# - name: Update the apt cache
+#   apt: update_cache=yes cache_valid_time=3600
 
-- name: install php8.1
-  apt: name="{{php_apt}}" state=present
+# - name: install php8.1
+#   apt: name="{{php_apt}}" state=present
+
+ - name: install packages
+    apt: name={{ item }} update_cache=yes state=present
+    with_items:
+      - {{php_apt}}
 
 - name: ensure php8.1-fpm cgi.fix_pathinfo=0
   lineinfile: dest={{path_php_ini}}} regexp='^(.*)cgi.fix_pathinfo=' line=cgi.fix_pathinfo=0
