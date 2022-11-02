@@ -30,3 +30,15 @@
   templates:
     src: "web.php.j2"
     desk: "{{path_to_file}}/routes/web.php"
+    
+- name: Install Composer dependencies
+  shell: composer install --no-scripts --no-dev
+
+- name: "generate atisan app key"
+  shell: "{{php_artisan}}/php artisan key:generate"
+
+- name: "Cache the configuration"
+  shell: "{{php_artisan}}/php artisan config:cache"
+
+- name: "Run the migrations"
+  shell: "{{php_artisan}}/php artisan migrate"
