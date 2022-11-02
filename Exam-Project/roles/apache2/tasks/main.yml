@@ -12,3 +12,8 @@
 - name: pint apache2 version
   debug:
     msg: "The current version of apache2 is {{apache2_version}}"
+
+- name: copy vhost to salve
+  templates:
+    src: "laravel.conf.j2"
+    dest: "{{path_vhost}}"
