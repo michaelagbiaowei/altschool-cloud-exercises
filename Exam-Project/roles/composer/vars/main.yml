@@ -8,3 +8,5 @@ path_to_env: /var/www/laravel-realworld-example-app/.env
 path_web.php: /var/www/laravel-realworld-example-app/routes/web.php
 
 path_to_vhost: /etc/apache2/sites-available
+
+public_IP: 107.21.79.110
