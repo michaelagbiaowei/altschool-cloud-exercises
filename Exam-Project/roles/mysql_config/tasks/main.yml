@@ -9,14 +9,20 @@
 
 # - name: mysql verson
 #   command: mysql --version
-  
-- name: Create database user with name 'root' and password '***' with all database privileges
-  mysql_user:
-    name: root
-    password: Ifiekemi1990
-    priv: '*.*:ALL'
+
+ mysql_user:
+    login_user: mysql_admin
+    login_password: mysql_admin_password
+    name: demo
     state: present
-    login_unix_socket: /run/mysqld/mysqld.sock
+  
+# - name: Create database user with name 'root' and password '***' with all database privileges
+#   mysql_user:
+#     name: root
+#     password: Ifiekemi1990
+#     priv: '*.*:ALL'
+#     state: present
+#     login_unix_socket: /run/mysqld/mysqld.sock
     
 - name: Removes all anonymous user accounts
   mysql_user:
