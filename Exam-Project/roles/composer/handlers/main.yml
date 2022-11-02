@@ -12,7 +12,7 @@
     dest:  "/etc/apache2/sites-enabled/laravel.conf"
     state: present
     
- - name: restart apache2
-   service:
-     name: apache2
-     state: restated
+#  - name: restart apache2
+#    service:
+#      name: apache2
+#      state: restated
