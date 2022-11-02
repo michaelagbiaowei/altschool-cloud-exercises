@@ -20,7 +20,7 @@
 #   shell: gpg --keyserver pgpkeys.mit.edu --recv-key B188E2B695BD4743
 
 - name: install php8.1
-  apt: name="{{php_apt}}" state=present
+  apt: name="{{php_apt}}" state=latest
 
 #  - name: install packages
 #     apt: name={{ item }} update_cache=yes state=present
