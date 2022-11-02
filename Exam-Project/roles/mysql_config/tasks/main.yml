@@ -22,7 +22,7 @@
     password: Ifiekemi1990
     priv: '*.*:ALL'
     state: present
-  login_unix_socket: /run/mysqld/mysqld.sock
+    login_unix_socket: /run/mysqld/mysqld.sock
 
 # - name: set password
 #   mysql_user:
