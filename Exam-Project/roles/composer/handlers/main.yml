@@ -3,7 +3,7 @@
 
 - name: disable 000-default.conf
   file:
-    path: "{{path_to_vhost}}/000-default.conf"
+    path: "/etc/apache2/sites-enabled/000-default.conf"
     state: absent
 
 - name: enable laravel.conf
