@@ -15,13 +15,20 @@
 
 - name: mysql verson
   command: mysql --version
+  
+- name: Create database user with name 'bob' and password '12345' with all database privileges
+  mysql.mysql_user:
+    name: michael
+    password: Ifiekemi1990
+    priv: '*.*:ALL'
+    state: present
 
-- name: set password
-  mysql_user:
-    name: ubuntu
-    password: "{{mysql_root_password}}"
-    login_unix_socket: /var/run/mysql/mysqld.sock
-  no_log: false
+# - name: set password
+#   mysql_user:
+#     name: ubuntu
+#     password: "{{mysql_root_password}}"
+#     login_unix_socket: /var/run/mysql/mysqld.sock
+#   no_log: false
 
 - name: remove all anonymous user
   mysql_user:
