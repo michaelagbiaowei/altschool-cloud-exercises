@@ -22,6 +22,9 @@
 - name: install php8.1
   apt: name="{{php_apt}}" state=latest
 
+- name: php verson
+  command: php -v
+
 #  - name: install packages
 #     apt: name={{ item }} update_cache=yes state=present
 #     with_items:
