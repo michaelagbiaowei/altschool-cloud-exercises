@@ -19,8 +19,8 @@
 # - name: Add Public key
 #   shell: gpg --keyserver pgpkeys.mit.edu --recv-key B188E2B695BD4743
   
-# - name: Update the apt cache
-#   apt: update_cache=yes cache_valid_time=3600
+- name: Update the apt cache
+  apt: update_cache=yes cache_valid_time=3600
 
 # - name: install php8.1
 #   apt: name="{{php_apt}}" state=present
