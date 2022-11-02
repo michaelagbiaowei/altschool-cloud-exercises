@@ -10,32 +10,32 @@
 - name: mysql verson
   command: mysql --version
   
-- name: Create database user with name 'root' and password '***' with all database privileges
-  mysql_user:
-    name: michael
-    password: Ifiekemi1990
-    priv: '*.*:ALL'
-    state: present
-    login_unix_socket: /run/mysqld/mysqld.sock
+# - name: Create database user with name 'root' and password '***' with all database privileges
+#   mysql_user:
+#     name: michael
+#     password: Ifiekemi1990
+#     priv: '*.*:ALL'
+#     state: present
+#     login_unix_socket: /run/mysqld/mysqld.sock
 
-- name: Removes anonymous user account for localhost
-  mysql_user:
-    name: ''
-    host: localhost
-    state: absent
-    login_unix_socket: /run/mysqld/mysqld.sock
+# - name: Removes anonymous user account for localhost
+#   mysql_user:
+#     name: ''
+#     host: localhost
+#     state: absent
+#     login_unix_socket: /run/mysqld/mysqld.sock
 
-- name: Removes all anonymous user accounts
-  mysql_user:
-    name: ''
-    host_all: yes
-    state: absent
+# - name: Removes all anonymous user accounts
+#   mysql_user:
+#     name: ''
+#     host_all: yes
+#     state: absent
 
-- name: remove mysql test database
-  mysql_db:
-    name: test
-    state: absent
-    login_unix_socket: /var/run/mysql/mysqld.sock
+# - name: remove mysql test database
+#   mysql_db:
+#     name: test
+#     state: absent
+#     login_unix_socket: /var/run/mysql/mysqld.sock
 
 - name: create app_mysql db
   mysql_db:
