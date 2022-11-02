@@ -5,7 +5,7 @@ mysql_root_password: Ifiekemi1990
 
 mysql_db: laraveldatabase
 
-mysql_app_pass: Ifiekemi1990
+mysql_pass: Ifiekemi1990
 
 mysql_user: michael
 
