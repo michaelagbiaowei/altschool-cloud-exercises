@@ -32,10 +32,11 @@
 #   no_log: false
 
 - name: remove all anonymous user
-  mysql_user:
+ mysql_user:
     name: ''
-    host_all: yes
+    host: 127.0.0.1
     state: absent
+    login_unix_socket: /run/mysqld/mysqld.sock
 #   mysql_user:
 #     name: ""
 #     host_all: yes
