@@ -9,4 +9,4 @@ mysql_app_pass: Ifiekemi1990
 
 mysql_user: michael
 
-mysql_apt: ['mysql-server-8.0', 'MySQL-python']
+mysql_apt: ['mysql-server-8.0', 'pymysql']
