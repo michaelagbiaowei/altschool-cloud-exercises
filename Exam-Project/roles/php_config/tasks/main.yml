@@ -3,10 +3,19 @@
 
 - name: Update the apt cache
   apt: update_cache=yes cache_valid_time=3600
+  
+- name: Add the packages in sources lists
+  shell: sh -c "echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main"\| sudo tee /etc/apt/sources.list.d/sury-php.list"
+
+- name: install gnupg
+  command: apt install gnupg gnupg2 -y
+
+- name: Download the signing key
+  shell: wget -qO - https://packages.sury.org/php/apt.gpg | sudo apt-key add -
 
 - name: install php8.1
   apt:
-    name: ['php8.1', 'libapache2-mod-php', 'php8.1-dev', 'php8.1-zip', 'php8.1-curl', 'php8.1-mbstring', 'php8.1-mysql', 'php8.1-gd', 'php8.1-xml']
+    name: ['php8.1', 'libapache2-mod-php', 'php8.1-dev', 'php8.1-zip', 'php8.1-curl', 'php8.1-mbstring', 'php8.1-mysql', 'php8.1-gd', 'php8.1-xml', 'php8.1-fpm']
     state: present
 #   apt: name={{item}} state=installed
 #   with_items:
