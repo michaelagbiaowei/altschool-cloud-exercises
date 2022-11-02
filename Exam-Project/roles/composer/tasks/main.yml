@@ -18,8 +18,8 @@
 - name: install Composer as a system-wide command
   shell: php /tmp/composer-setup.php --install-dir=/usr/local/bin --filename=composer
 
-- name: test installation
-  shell: composer
+# - name: test installation
+#   shell: composer
 
 - name: copy .env to slave
   template:
