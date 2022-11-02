@@ -46,18 +46,18 @@
 #     recursive: yes
 #     become: true
 
-- name: set least privillages for laravel/storage
-  file:
-    path: "{{path_to_file}}/storage"
-    state: directory
-    mode: 775
-    recursive: yes
-    become: true
+# - name: set least privillages for laravel/storage
+#   file:
+#     path: "{{path_to_file}}/storage"
+#     state: directory
+#     mode: 775
+#     recursive: yes
+#     become: true
 
-- name: set least privillages for laravel/bootstrap/cache
-  file:
-    path: "{{path_to_file}}/bootstrap/cache"
-    state: directory
-    mode: 775
-    recursive: yes
-    become: true
+# - name: set least privillages for laravel/bootstrap/cache
+#   file:
+#     path: "{{path_to_file}}/bootstrap/cache"
+#     state: directory
+#     mode: 775
+#     recursive: yes
+#     become: true
