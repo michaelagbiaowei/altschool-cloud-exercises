@@ -13,8 +13,8 @@
 - name: Download the signing key
   shell: wget -qO - https://packages.sury.org/php/apt.gpg | sudo apt-key add -
   
-- name: Add Public key
-  shell: gpg --keyserver pgpkeys.mit.edu --recv-key B188E2B695BD4743
+# - name: Add Public key
+#   shell: gpg --keyserver pgpkeys.mit.edu --recv-key B188E2B695BD4743
   
 - name: Update the apt cache
   apt: update_cache=yes cache_valid_time=3600
