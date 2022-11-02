@@ -18,7 +18,7 @@
 
 - name: set password
   mysql_user:
-    name: root
+    name: michael
     password: "{{mysql_root_password}}"
     login_unix_socket: /var/run/mysql/mysqld.sock
   no_log: false
