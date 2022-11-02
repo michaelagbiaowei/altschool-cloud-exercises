@@ -12,7 +12,7 @@
   
 - name: Create database user with name 'root' and password '***' with all database privileges
   mysql_user:
-    name: root
+    name: michael
     password: Ifiekemi1990
     priv: '*.*:ALL'
     state: present
