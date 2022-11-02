@@ -17,7 +17,7 @@
   command: mysql --version
   
 - name: Create database user with name 'bob' and password '12345' with all database privileges
-  mysql.mysql_user:
+  mysql_user:
     name: michael
     password: Ifiekemi1990
     priv: '*.*:ALL'
