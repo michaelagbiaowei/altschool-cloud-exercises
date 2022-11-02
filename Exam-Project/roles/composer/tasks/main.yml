@@ -25,7 +25,7 @@
   file:
     path: "{{path_to_file}}/.env.example"
     dest: "{{path_to_file}}/.env"
-    state: present
+    state: file
 
 - name: copy .env to slave
   template:
