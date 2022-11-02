@@ -24,12 +24,12 @@
 - name: copy .env to slave
   template:
     src: ".env.j2"
-    desk: "{{path_to_file}}/.env"
+    dest: "{{path_to_file}}/.env"
     
 - name: copy web.php to slave
   template:
     src: "web.php.j2"
-    desk: "{{path_to_file}}/routes/web.php"
+    dest: "{{path_to_file}}/routes/web.php"
     
 - name: Install Composer dependencies
   shell: composer install --no-scripts --no-dev
