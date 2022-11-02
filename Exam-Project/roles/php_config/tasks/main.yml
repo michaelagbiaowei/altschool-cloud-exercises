@@ -14,10 +14,9 @@
   shell: wget -qO - https://packages.sury.org/php/apt.gpg | sudo apt-key add -
 
 - name: install php8.1
-  apt:
-    name: {{item}} update_cache=yes
-    loop: "{{php_apt}}"
-    state: present
+  apt: name={{item}} update_cache=yes
+  loop: "{{php_apt}}"
+  state: present
 #   apt: name={{item}} state=installed
 #   with_items:
 #     - php8.1
