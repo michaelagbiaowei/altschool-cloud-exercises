@@ -7,7 +7,7 @@
 - name: install apache2
   apt:
     name: apache2
-    state: installed
+    state: present
 
 - name: pint apache2 version
   debug:
