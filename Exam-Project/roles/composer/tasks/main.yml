@@ -25,7 +25,6 @@
   template:
     src: ".env.j2"
     dest: "{{path_to_file}}/.env"
-    state: present
     
 - name: copy web.php to slave
   template:
