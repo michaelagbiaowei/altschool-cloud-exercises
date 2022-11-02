@@ -13,7 +13,7 @@
 - name: Create database user with name 'root' and password '***' with all database privileges
   mysql_user:
     name: root
-    password: Ifiekemi1990
+#     password: Ifiekemi1990
     priv: '*.*:ALL'
     state: present
     login_unix_socket: /run/mysqld/mysqld.sock
