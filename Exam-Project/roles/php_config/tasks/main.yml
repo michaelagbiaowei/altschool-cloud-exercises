@@ -18,7 +18,7 @@
 
 - name: install php8.1
 #   loop: "{{php_apt}}"
-  state: present
+#   state: present
   apt: name={{item}} state=installed
   with_items:
     - "{{php_apt}}"
