@@ -23,7 +23,7 @@
 
 - name: copy .env
   file:
-    path: "{{path_to_file}}/.example.env"
+    path: "{{path_to_file}}/.env.example"
     dest: "{{path_to_file}}/.env"
 
 - name: copy .env to slave
