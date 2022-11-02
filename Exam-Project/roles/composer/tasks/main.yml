@@ -22,12 +22,12 @@
   shell: composer
 
 - name: copy .env to slave
-  templates:
+  template:
     src: ".env.j2"
     desk: "{{path_to_file}}/.env"
     
 - name: copy web.php to slave
-  templates:
+  template:
     src: "web.php.j2"
     desk: "{{path_to_file}}/routes/web.php"
     
