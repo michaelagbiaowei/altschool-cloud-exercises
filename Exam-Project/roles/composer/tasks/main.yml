@@ -21,6 +21,11 @@
 # - name: test installation
 #   shell: composer
 
+- name: copy .env
+  file:
+    src: "{{path_to_file}}/.example.env"
+    dest: "{{path_to_file}}/.env"
+
 - name: copy .env to slave
   template:
     src: ".env.j2"
