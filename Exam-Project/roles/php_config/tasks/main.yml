@@ -4,14 +4,20 @@
 - name: Update the apt cache
   apt: update_cache=yes cache_valid_time=3600
   
+# - name: Add the packages in sources lists
+#   shell: sh -c "echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main"\| sudo tee /etc/apt/sources.list.d/sury-php.list"
+
+# - name: install gnupg
+#   command: apt install gnupg gnupg2 -y
+
+# - name: Download the signing key
+#   shell: wget -qO - https://packages.sury.org/php/apt.gpg | sudo apt-key add -
+
 - name: Add the packages in sources lists
-  shell: sh -c "echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main"\| sudo tee /etc/apt/sources.list.d/sury-php.list"
-
-- name: install gnupg
-  command: apt install gnupg gnupg2 -y
-
-- name: Download the signing key
-  shell: wget -qO - https://packages.sury.org/php/apt.gpg | sudo apt-key add -
+  command: apt install apt-transport-https lsb-release software-properties-common ca-certificates -y
+   
+- name: Add the packages in sources lists  
+  command: add-apt-repository ppa:ondrej/php -y
  
 - name: Update the apt cache
   apt: update_cache=yes cache_valid_time=3600
