@@ -4,6 +4,6 @@
   roles:
     - git_repo
     - apache2
-    - php_config
-    - mysql_config
-    - composer
+ #- php_config
+ #- mysql_config
+ # - composer
