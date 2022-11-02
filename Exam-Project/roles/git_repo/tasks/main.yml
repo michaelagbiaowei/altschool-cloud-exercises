@@ -14,20 +14,16 @@
     msg: "The current version of git is {{git_version}}"
 
 - name: Clone a github repository
-  git: >
+  git: 
     dest: "{{PWD}}"
     repo: "{{git_repo_url}}"
-    clone: yes
-    update: no
-    version: master
-    accept_hostkey: yes
 
 - name: set least privillages for laravel www-data
   file:
     path: "{{path_to_file}}"
     state: directory
-    sudo_user: www-data
-    recursive: yes
+    mode: "775"
+    owner: admin
     become: true
 
 - name: set least privillages for laravel
