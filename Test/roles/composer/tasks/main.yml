@@ -1,10 +1,10 @@
 ---
 # tasks file for composer
 
-- name: Checks if Composer is already installed
-  command: "{{ composer_path }}"
-  ignore_errors: true
-  register: composer_installed
+# - name: Checks if Composer is already installed
+#   command: "{{ composer_path }}"
+#   ignore_errors: true
+#   register: composer_installed
 
 - name: Install Composer if its not already installed
   block:
