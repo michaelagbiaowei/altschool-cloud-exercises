@@ -19,5 +19,5 @@
 - name: php verson
   command: php -v
   
-- name: ensure php5-fpm cgi.fix_pathinfo=0
+- name: ensure php8-fpm cgi.fix_pathinfo=0
   lineinfile: dest=/etc/php/8.1/apache2/php.ini regexp='^(.*)cgi.fix_pathinfo=' line=cgi.fix_pathinfo=0
