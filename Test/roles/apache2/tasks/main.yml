@@ -8,7 +8,7 @@
 - name: Sets Apache2 conf file
   template:
     src: "laravel.conf.j2"
-    dest: "/etc/apache2/sites-available/{{laravel.conf}}"
+    dest: "/etc/apache2/sites-available/laravel.conf"
 
 # - name: Enables new site
 #   file:
