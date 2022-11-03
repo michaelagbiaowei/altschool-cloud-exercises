@@ -1,0 +1,27 @@
+---
+# tasks file for setup
+
+- name: update slave server
+  command: apt update
+
+- name: install git and git dependencies
+  apt:
+    name: git
+    state: present
+
+- name: print git version
+  debug:
+    msg: "The current version of git is {{git_version}}"
+
+- name: Clone a github repository
+  git:
+    dest: "{{ remote_www_root }}/{{ app_root_dir }}"
+    repo: "{{git_repo_url}}"
+
+- name: Make sure the remote app root exists and has the right permissions
+  file:
+    path: "{{ remote_www_root }}/{{ app_root_dir }}"
+    state: directory
+    mode: '0755'
+    owner: "{{ remote_user }}"
+    group: "{{ remote_user }}"

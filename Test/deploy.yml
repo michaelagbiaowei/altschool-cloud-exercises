@@ -1,0 +1,5 @@
+- name: deploy
+  become: true
+  hosts: laravel-host
+  roles:
+    - setup
