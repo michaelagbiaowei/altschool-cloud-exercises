@@ -26,16 +26,20 @@
     owner: "{{ remote_user }}"
     group: "{{ remote_user }}"
 
-- name: Set up additional directory permissions for www-data user on storage folder
-  acl:
-    path: "{{ remote_www_root }}/{{ app_root_dir }}/storage/"
-    mode: '0755'
-    recursive: yes
-    state: present
-
 - name: Set up additional directory permissions for www-data user on bootstrap/cache folder
-  acl:
+  file:
      path: "{{ remote_www_root }}/{{ app_root_dir }}/bootstrap/cache/"
-      mode: '0755'
-     recursive: yes
-     state: present
+       mode: '0777'
+    recursive: yes
+    state: directory
+  beome: yes
+
+
+- name: Set up additional directory permissions for www-data user on storage folder
+  file:
+    path: "{{ remote_www_root }}/{{ app_root_dir }}/storage/logs/laravel.log"
+    mode: '0777'
+    recursive: yes
+    state: directory
+  beome: yes
+
