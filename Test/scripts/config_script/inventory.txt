@@ -1,0 +1,1 @@
+slave ansible_host=54.204.71.17 ansible_connection=ssh ansible_user=ubuntu
