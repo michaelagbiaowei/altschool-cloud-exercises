@@ -6,11 +6,12 @@
     src: .env.j2
     dest: "{{ remote_www_root }}/{{ app_root_dir }}/.env"
 
-# - name: Install Dependencies with Composer
-#   composer:
-#     command: install
-#     working_dir: "{{ remote_www_root }}/{{ app_root_dir }}"
-#     tags: [ 'composer:install' ]
+- name: Installing Laravel dependencies
+  composer:
+    command: install
+    working_dir: "{{ remote_www_root }}/{{ app_root_dir }}"
+  become: false
+  tags: [ 'composer:install' ]
 
 - name: Generate app key
   command: "/usr/bin/php {{ remote_www_root }}/{{ app_root_dir }}/artisan key:generate"
@@ -21,5 +22,5 @@
   tags: [ 'laravel', 'artisan:storage' ]
 
 - name: Run Migrations + Seeders
-  command: "/usr/bin/php {{ remote_www_root }}/{{ app_root_dir }}/artisan migrate"
+  command: "/usr/bin/php {{ remote_www_root }}/{{ app_root_dir }}/artisan migrate --seed"
   tags: [ 'laravel', 'artisan:migrate' ]
