@@ -1,48 +1,30 @@
 ---
 # tasks file for composer
 
-- name: download the installer
-  shell: curl -sS https://getcomposer.org/installer -o /tmp/composer-setup.php
-  args:
-    creates: /usr/local/bin/composer
+- name: Download Composer Installation Script (if not already installed)
+  get_url:
+    url: https://getcomposer.org/installer
+    dest: /tmp/composer-setup.php
 
-- name: facilitate the verification step
-  shell: HASH=`curl -sS https://composer.github.io/installer.sig`
+- name: Run Composer Installer (if not already installed)
+  command:
+    cmd: /usr/bin/php /tmp/composer-setup.php
+    creates: composer.phar
 
-- name: verify the obtained value
-  shell: sh -c "echo $HASH"
+- name: Copy Composer Executable to /usr/local/bin
+  become: true
+  copy:
+    src: composer.phar
+    dest: /usr/local/bin/composer
+    remote_src: yes
+    mode: '0755'
 
-- name: verify that the installation script is safe to run
-  shell: php -r "if (hash_file('SHA384', '/tmp/composer-setup.php') === '$HASH') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
+- name: Remove phar
+  file:
+    path: composer.phar
+    state: absent
 
-- name: install Composer as a system-wide command
-  shell: php /tmp/composer-setup.php --install-dir=/usr/local/bin --filename=composer
-
-# - name: test installation
-#   shell: composer
-
-- name: copy .env to slave
-  template:
-    src: ".env.j2"
-    dest: "{{path_to_env}}"
-    
-- name: copy web.php to slave
-  template:
-    src: "web.php.j2"
-    dest: "{{path_to_file}}/routes/web.php"
-    
-- name: install composer
-  composer:
-    command: install
-    working_dir: "{{path_to_file}}"
-  become: false
-  tags: ['composer:install']
-
-- name: "generate atisan app key"
-  shell: "{{php_artisan}}/php artisan key:generate"
-
-- name: "Cache the configuration"
-  shell: "{{php_artisan}}/php artisan config:cache"
-
-- name: "Run the migrations"
-  shell: "{{php_artisan}}/php artisan migrate"
+- name: Remove Install Script
+  file:
+    path: /tmp/composer-setup.php
+    state: absent

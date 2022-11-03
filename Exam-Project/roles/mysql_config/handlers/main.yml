@@ -1,8 +1,0 @@
----
-# handlers file for mysql_config
-
-- name: enable mysql
-  service:
-    name: mysql
-    enabled: yes
-    state: started

@@ -1,8 +1,12 @@
 ---
 # handlers file for apache2
 
-- name: start apache2
+- name: Reload apache2
   service:
     name: apache2
-    enabled: yes
+    state: reloaded
+
+- name: Restart apache2
+  service:
+    name: apache2
     state: restarted

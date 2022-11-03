@@ -1,9 +1,10 @@
 - name: deploy
   become: true
-  hosts: laravel-host
+  hosts: slave
   roles:
-#- git_repo
-#- apache2
-#- php_config
-#-mysql_config
-    - composer
+#     - setup
+#     - apache2
+#     - php
+#     - composer
+#     - mysql
+    - deploy

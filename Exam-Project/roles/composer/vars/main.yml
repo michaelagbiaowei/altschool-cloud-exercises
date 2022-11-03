@@ -1,18 +1,4 @@
 ---
 # vars file for composer
 
-# php_artisan: /var/www/laravel-realworld-example-app/artisan
-
-# path_to_env: /var/www/laravel-realworld-example-app/.env
-
-path_web.php: /var/www/routes/web.php
-
-path_to_vhost: /etc/apache2/sites-available
-
-public_IP: 107.21.79.110
-
-path_to_file: /var/www
-
-php_artisan: /var/www/artisan
-
-path_to_env: /var/www/.env
+composer_path: /usr/local/bin/composer
