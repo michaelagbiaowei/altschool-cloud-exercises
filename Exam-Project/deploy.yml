@@ -2,9 +2,9 @@
   become: true
   hosts: slave
   roles:
-    - setup
-    - apache2
-    - php
+#     - setup
+#     - apache2
+#     - php
 #     - composer
 #     - mysql
     - deploy
