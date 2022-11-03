@@ -2,8 +2,8 @@
   become: true
   hosts: slave
   roles:
-#     - setup
-#     - apache2
-#     - php
-#     - composer
+    - setup
+    - apache2
+    - php
+    - composer
     - mysql
