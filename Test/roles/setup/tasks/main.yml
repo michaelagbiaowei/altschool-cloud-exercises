@@ -31,6 +31,7 @@
     path: "{{ remote_www_root }}/{{ app_root_dir }}/bootstrap/cache"
     state: directory
     mode: '0777'
+    owner: "{{ remote_user }}"
     recursive: yes    
   become: yes
 
@@ -39,6 +40,7 @@
   file:
     path: "{{ remote_www_root }}/{{ app_root_dir }}/storage/logs/laravel.log"
     mode: '0777'
+    owner: "{{ remote_user }}"
     recursive: yes
     state: directory
   become: yes
