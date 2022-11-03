@@ -38,4 +38,4 @@
      path: "{{ remote_www_root }}/{{ app_root_dir }}/bootstrap/cache/"
      entry: group:www-data:rwX
      recursive: yes
-      state: present
+     state: present
