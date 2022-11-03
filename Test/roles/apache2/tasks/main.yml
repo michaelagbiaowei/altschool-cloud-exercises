@@ -8,7 +8,7 @@
 - name: copy vhost to salve
   template:
     src: "laravel.conf.j2"
-    dest: "/etc/apache2/sites-enabled/laravel.conf"
+    dest: "/etc/apache2/sites-available/laravel.conf"
     remote_src: true
 
 # - name: Enables new site
