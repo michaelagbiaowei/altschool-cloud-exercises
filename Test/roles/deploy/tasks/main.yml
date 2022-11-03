@@ -21,6 +21,6 @@
   ommand: "/usr/bin/php {{ remote_www_root }}/{{ app_root_dir }}/artisan storage:link"
   tags: [ 'laravel', 'artisan:storage' ]
 
- - name: Run Migrations + Seeders
-   command: "/usr/bin/php {{ remote_www_root }}/{{ app_root_dir }}/artisan migrate --seed"
-   tags: [ 'laravel', 'artisan:migrate' ]
+- name: Run Migrations + Seeders
+  command: "/usr/bin/php {{ remote_www_root }}/{{ app_root_dir }}/artisan migrate --seed"
+  tags: [ 'laravel', 'artisan:migrate' ]
