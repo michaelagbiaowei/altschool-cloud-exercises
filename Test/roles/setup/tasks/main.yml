@@ -33,7 +33,7 @@
     mode: '0777'
     owner: "{{ remote_user }}"
 #     recursive: yes    
-    become: yes
+#     become: yes
 
 
 - name: Set up additional directory permissions for www-data user on storage folder
@@ -43,5 +43,5 @@
     owner: "{{ remote_user }}"
 #     recursive: yes
     state: directory
-    become: yes
+#     become: yes
 
