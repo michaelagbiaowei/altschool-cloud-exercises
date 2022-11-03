@@ -8,8 +8,7 @@
 - name: copy vhost to salve
   template:
     src: "laravel.conf.j2"
-    dest: "/etc/apache2/sites-available/laravel.conf"
-    remote_src: true
+    dest: "{{path_vhost}}"
 
 # - name: Enables new site
 #   file:
@@ -24,21 +23,3 @@
 #     state: absent
 #   notify: Reload apache2
 
-
-
-# - name: update slave server
-#   command: apt update
-
-# - name: install apache2
-#   apt:
-#     name: apache2
-#     state: present
-
-# - name: pint apache2 version
-#   debug:
-#     msg: "The current version of apache2 is {{apache2_version}}"
-
-# - name: copy vhost to salve
-#   template:
-#     src: "laravel.conf.j2"
-#     dest: "{{path_vhost}}"
