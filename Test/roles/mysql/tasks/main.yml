@@ -11,7 +11,7 @@
     name: root
     password: "{{ mysql_root_password }}"
     login_unix_socket: /var/run/mysqld/mysqld.sock
-  no_log: true
+  no_log: false
 
 - name: Removes all anonymous user accounts
   mysql_user:
