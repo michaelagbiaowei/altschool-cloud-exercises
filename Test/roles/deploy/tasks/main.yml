@@ -3,7 +3,7 @@
 
 - name: Set up .env file
   template:
-    src: laravel-env.j2
+    src: .env.j2
     dest: "{{ remote_www_root }}/{{ app_root_dir }}/.env"
 
 - name: Install Dependencies with Composer
