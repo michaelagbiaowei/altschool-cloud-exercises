@@ -25,3 +25,17 @@
     mode: '0755'
     owner: "{{ remote_user }}"
     group: "{{ remote_user }}"
+
+- name: Set up additional directory permissions for www-data user on storage folder
+    acl:
+      path: "{{ remote_www_root }}/{{ app_root_dir }}/storage/"
+      entry: group:www-data:rwX
+       recursive: yes
+       state: present
+
+- name: Set up additional directory permissions for www-data user on bootstrap/cache folder
+    acl:
+      path: "{{ remote_www_root }}/{{ app_root_dir }}/bootstrap/cache/"
+      entry: group:www-data:rwX
+      recursive: yes
+        state: present
