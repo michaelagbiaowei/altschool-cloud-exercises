@@ -1,19 +1,48 @@
 ---
 # tasks file for apache2
 
-- name: update slave server
-  command: apt update
+- name: Install Apache2
+  apt: name=apache2 update_cache=yes state=latest
 
-- name: install apache2
-  apt:
-    name: apache2
-    state: present
-
-- name: pint apache2 version
-  debug:
-    msg: "The current version of apache2 is {{apache2_version}}"
-
-- name: copy vhost to salve
+# Apache2 Configuration
+- name: Sets Apache2 conf file
   template:
     src: "laravel.conf.j2"
-    dest: "{{path_vhost}}"
+    dest: "/etc/apache2/sites-available/{{laravel.conf}}"
+
+- name: Enables new site
+  file:
+    src: "/etc/apache2/sites-available/{{laravel.conf}}"
+    dest: "/etc/apache2/sites-enabled/{{laravel.conf}}"
+    state: link
+  notify: Reload Apache2
+
+- name: Removes "default" site
+  file:
+    path: "/etc/apache2/sites-enabled/default"
+    state: absent
+  notify: Reload apache2
+
+# UFW Configuration
+- name: "UFW - Allow HTTP on port {{ http_port }}"
+  ufw:
+    rule: allow
+    port: "{{ http_port }}"
+    proto: tcp
+
+# - name: update slave server
+#   command: apt update
+
+# - name: install apache2
+#   apt:
+#     name: apache2
+#     state: present
+
+# - name: pint apache2 version
+#   debug:
+#     msg: "The current version of apache2 is {{apache2_version}}"
+
+# - name: copy vhost to salve
+#   template:
+#     src: "laravel.conf.j2"
+#     dest: "{{path_vhost}}"
