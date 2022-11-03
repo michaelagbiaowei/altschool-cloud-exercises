@@ -10,16 +10,16 @@
     src: "laravel.conf.j2"
     dest: "{{path_vhost}}"
 
-# - name: Enables new site
-#   file:
-#     src: "/etc/apache2/sites-available/{{laravel.conf}}"
-#     dest: "/etc/apache2/sites-enabled/{{laravel.conf}}"
-#     state: link
-#   notify: Reload Apache2
+- name: Enables new site
+  file:
+    src: "/etc/apache2/sites-available/laravel.conf"
+    dest: "/etc/apache2/sites-enabled/laravel.conf"
+    state: link
+  notify: Reload Apache2
 
-# - name: Removes "default" site
-#   file:
-#     path: "/etc/apache2/sites-enabled/default"
-#     state: absent
-#   notify: Reload apache2
+- name: Removes "default" site
+  file:
+    path: "/etc/apache2/sites-enabled/000-default.conf"
+    state: absent
+  notify: Reload apache2
 
