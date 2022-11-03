@@ -1,5 +1,5 @@
 - name: deploy
   become: true
-  hosts: all
+  hosts: slave
   roles:
     - setup
