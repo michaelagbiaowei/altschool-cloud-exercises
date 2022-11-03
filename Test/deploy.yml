@@ -5,3 +5,4 @@
     - setup
     - apache2
     - php
+    - composer
