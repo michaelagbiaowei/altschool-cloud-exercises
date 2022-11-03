@@ -6,3 +6,4 @@
     - apache2
     - php
     - composer
+    - mysql
