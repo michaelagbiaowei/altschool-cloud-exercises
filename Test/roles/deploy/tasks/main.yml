@@ -18,7 +18,7 @@
   tags: [ 'laravel', 'artisan:key' ]
 
 - name: Set up app storage link
-  ommand: "/usr/bin/php {{ remote_www_root }}/{{ app_root_dir }}/artisan storage:link"
+  command: "/usr/bin/php {{ remote_www_root }}/{{ app_root_dir }}/artisan storage:link"
   tags: [ 'laravel', 'artisan:storage' ]
 
 - name: Run Migrations + Seeders
