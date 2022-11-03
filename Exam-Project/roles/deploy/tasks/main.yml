@@ -12,6 +12,7 @@
     working_dir: "{{ remote_www_root }}/{{ app_root_dir }}"
   become: false
   tags: [ 'composer:install' ]
+  ignore_errors: yes
 
 - name: Generate app key
   command: "/usr/bin/php {{ remote_www_root }}/{{ app_root_dir }}/artisan key:generate"
