@@ -1,2 +1,26 @@
 ---
 # tasks file for deploy
+
+- name: Set up .env file
+  template:
+    src: laravel-env.j2
+    dest: "{{ remote_www_root }}/{{ app_root_dir }}/.env"
+
+- name: Install Dependencies with Composer
+  become: false
+  composer:
+    command: install
+    working_dir: "{{ remote_www_root }}/{{ app_root_dir }}"
+    tags: [ 'composer:install' ]
+
+- name: Generate app key
+  command: "/usr/bin/php {{ remote_www_root }}/{{ app_root_dir }}/artisan key:generate"
+  tags: [ 'laravel', 'artisan:key' ]
+
+- name: Set up app storage link
+  ommand: "/usr/bin/php {{ remote_www_root }}/{{ app_root_dir }}/artisan storage:link"
+  tags: [ 'laravel', 'artisan:storage' ]
+
+ - name: Run Migrations + Seeders
+   command: "/usr/bin/php {{ remote_www_root }}/{{ app_root_dir }}/artisan migrate --seed"
+   tags: [ 'laravel', 'artisan:migrate' ]
