@@ -1,7 +1,6 @@
 ---
 # tasks file for composer
 
----
 - name: Checks if Composer is already installed
   command: "{{ composer_path }}"
   ignore_errors: true
