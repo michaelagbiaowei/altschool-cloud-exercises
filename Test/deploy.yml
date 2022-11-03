@@ -3,3 +3,4 @@
   hosts: slave
   roles:
     - setup
+    - apache2
