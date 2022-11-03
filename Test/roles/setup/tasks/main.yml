@@ -32,8 +32,8 @@
     state: directory
     mode: '0777'
     owner: "{{ remote_user }}"
-    recursive: yes    
-  become: yes
+#     recursive: yes    
+    become: yes
 
 
 - name: Set up additional directory permissions for www-data user on storage folder
@@ -41,7 +41,7 @@
     path: "{{ remote_www_root }}/{{ app_root_dir }}/storage/logs/laravel.log"
     mode: '0777'
     owner: "{{ remote_user }}"
-    recursive: yes
+#     recursive: yes
     state: directory
-  become: yes
+    become: yes
 
