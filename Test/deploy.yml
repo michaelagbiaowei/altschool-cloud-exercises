@@ -1,5 +1,5 @@
 - name: deploy
   become: true
-  hosts: hosts
+  hosts: all
   roles:
     - setup
