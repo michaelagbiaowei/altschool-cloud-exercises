@@ -26,13 +26,13 @@
     owner: "{{ remote_user }}"
     group: "{{ remote_user }}"
 
-- name: Set up additional directory permissions for www-data user on bootstrap/cache folder
-  file:
-    path: "{{ remote_www_root }}/{{ app_root_dir }}/bootstrap/cache"
-    state: directory
-    mode: '0777'
-    recursive: yes    
-  beome: yes
+# - name: Set up additional directory permissions for www-data user on bootstrap/cache folder
+#   file:
+#     path: "{{ remote_www_root }}/{{ app_root_dir }}/bootstrap/cache"
+#     state: directory
+#     mode: '0777'
+#     recursive: yes    
+#   beome: yes
 
 
 - name: Set up additional directory permissions for www-data user on storage folder
