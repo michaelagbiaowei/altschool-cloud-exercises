@@ -9,6 +9,7 @@
   template:
     src: "laravel.conf.j2"
     dest: "/etc/apache2/sites-enabled/laravel.conf"
+    remote_src: true
 
 # - name: Enables new site
 #   file:
