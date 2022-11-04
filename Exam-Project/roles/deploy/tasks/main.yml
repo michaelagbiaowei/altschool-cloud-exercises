@@ -25,5 +25,4 @@
 - name: Run Migrations + Seeders
   command: "/usr/bin/php {{ remote_www_root }}/{{ app_root_dir }}/artisan migrate"
   tags: [ 'laravel', 'artisan:migrate' ]
-  service:
-    state: present
+  state: present
