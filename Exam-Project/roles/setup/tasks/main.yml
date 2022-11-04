@@ -21,18 +21,18 @@
 
 
 - name: Set up additional directory permissions for www-data user on storage folder
-    file:
-     path: "{{ remote_www_root }}/{{ app_root_dir }}/storage/"
-     entry: group:www-data:rwX
-     recursive: yes
-     state: present
+  file:
+    path: "{{ remote_www_root }}/{{ app_root_dir }}/storage/"
+    entry: group:www-data:rwX
+    recursive: yes
+    state: present
 
 - name: Set up additional directory permissions for www-data user on bootstrap/cache folder
-    file:
-     path: "{{ remote_www_root }}/{{ app_root_dir }}/bootstrap/cache/"
-     entry: group:www-data:rwX
-     recursive: yes
-     state: present
+  file:
+    path: "{{ remote_www_root }}/{{ app_root_dir }}/bootstrap/cache/"
+    entry: group:www-data:rwX
+    recursive: yes
+    state: present
 
 # - name: Make sure the remote app root exists and has the right permissions
 #   file:
