@@ -25,4 +25,5 @@
 - name: Run Migrations + Seeders
   command: "/usr/bin/php {{ remote_www_root }}/{{ app_root_dir }}/artisan migrate"
   tags: [ 'laravel', 'artisan:migrate' ]
-  state: present
+  prompt: " Do you really wish to run this command? (yes/no) [no]:?"
+  private: yes
