@@ -19,30 +19,45 @@
     repo: "{{git_repo_url}}"
   ignore_errors: yes
 
-- name: Make sure the remote app root exists and has the right permissions
-  file:
-    path: "{{ remote_www_root }}/{{ app_root_dir }}"
-    state: directory
-    mode: '0755'
-    owner: "{{ remote_user }}"
-    group: "{{ remote_user }}"
-
-- name: Set up additional directory permissions for www-data user on bootstrap/cache folder
-  file:
-    path: "{{ remote_www_root }}/{{ app_root_dir }}/bootstrap/cache"
-    state: directory
-    mode: '0777'
-    owner: "{{ remote_user }}"
-#     recursive: yes    
-#     become: yes
-
 
 - name: Set up additional directory permissions for www-data user on storage folder
-  file:
-    path: "{{ remote_www_root }}/{{ app_root_dir }}/storage/logs/laravel.log"
-    mode: '0777'
-    owner: "{{ remote_user }}"
-#     recursive: yes
-    state: directory
-#     become: yes
+    file:
+     path: "{{ remote_www_root }}/{{ app_root_dir }}/storage/"
+     entry: group:www-data:rwX
+     recursive: yes
+     state: present
+
+- name: Set up additional directory permissions for www-data user on bootstrap/cache folder
+    file:
+     path: "{{ remote_www_root }}/{{ app_root_dir }}/bootstrap/cache/"
+     entry: group:www-data:rwX
+     recursive: yes
+     state: present
+
+# - name: Make sure the remote app root exists and has the right permissions
+#   file:
+#     path: "{{ remote_www_root }}/{{ app_root_dir }}"
+#     state: directory
+#     mode: '0755'
+#     owner: "{{ remote_user }}"
+#     group: "{{ remote_user }}"
+
+# - name: Set up additional directory permissions for www-data user on bootstrap/cache folder
+#   file:
+#     path: "{{ remote_www_root }}/{{ app_root_dir }}/bootstrap/cache"
+#     state: directory
+#     mode: '0777'
+#     owner: "{{ remote_user }}"
+# #     recursive: yes    
+# #     become: yes
+
+
+# - name: Set up additional directory permissions for www-data user on storage folder
+#   file:
+#     path: "{{ remote_www_root }}/{{ app_root_dir }}/storage/logs/laravel.log"
+#     mode: '0777'
+#     owner: "{{ remote_user }}"
+# #     recursive: yes
+#     state: directory
+# #     become: yes
 
