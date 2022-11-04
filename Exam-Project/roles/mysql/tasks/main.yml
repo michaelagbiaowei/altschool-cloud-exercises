@@ -33,6 +33,8 @@
 #     state: present
 #     login_unix_socket: /var/run/mysqld/mysqld.sock
 
+
+
 # - name: Create App MySQL user and grants access to App DB
 #   mysql_user:
 #     name: "{{ mysql_app_user }}"
