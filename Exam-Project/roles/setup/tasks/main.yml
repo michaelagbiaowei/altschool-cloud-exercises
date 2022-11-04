@@ -24,6 +24,7 @@
   acl:
     path: "{{ remote_www_root }}/{{ app_root_dir }}/storage/"
     entry: group:www-data:rwX
+     state: query
 #     recursive: yes
 #     state: present
 
@@ -31,6 +32,7 @@
   acl:
     path: "{{ remote_www_root }}/{{ app_root_dir }}/bootstrap/cache/"
     entry: group:www-data:rwX
+    state: query
 #     recursive: yes
 #     state: present
 
