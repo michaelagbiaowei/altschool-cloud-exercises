@@ -1,6 +1,5 @@
 ---
 # tasks file for setup
-
 - name: update slave server
   command: apt update
 
@@ -22,15 +21,16 @@
     group: "{{ remote_user }}"
 
 - name: Set up additional directory permissions for www-data user on bootstrap/cache folder
-    file:
-      path: "{{ remote_www_root }}/{{ app_root_dir }}/bootstrap/cache"
-      state: directory
-      mode: '0777'
-      owner: "{{ remote_user }}"
+  file:
+    path: "{{ remote_www_root }}/{{ app_root_dir }}/bootstrap/cache"
+    state: directory
+    mode: '0777'
+    owner: "{{ remote_user }}"
+    
 - name: Set up additional directory permissions for www-data user on storage folder
-    file:
-      path: "{{ remote_www_root }}/{{ app_root_dir }}/storage/logs/laravel.log"
-      mode: '0777'
-      owner: "{{ remote_user }}"
-      state: directory
+  file:
+    path: "{{ remote_www_root }}/{{ app_root_dir }}/storage/logs/laravel.log"
+    mode: '0777'
+    owner: "{{ remote_user }}"
+    state: directory
  
