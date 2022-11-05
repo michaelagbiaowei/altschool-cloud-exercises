@@ -9,6 +9,6 @@
     - php
     - composer
 #     - mysql
-    #- geerlingguy.mysql
+    - geerlingguy.mysql
     - deploy
     
