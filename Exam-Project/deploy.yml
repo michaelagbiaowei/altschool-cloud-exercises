@@ -5,7 +5,7 @@
     - vars/main.yml
   roles:
     - setup
-#     - apache2
+    - apache2
 #     - php
 #     - composer
 #     - mysql
