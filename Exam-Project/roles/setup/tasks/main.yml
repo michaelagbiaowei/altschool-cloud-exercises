@@ -13,14 +13,6 @@
   debug:
     msg: "The current version of git is {{git_version}}"
       
-      #- name: Set up additional directory permissions for www-data user on bootstrap/cache folder
-  #acl:
-    #    #path: "{{ remote_www_root }}/{{ app_root_dir }}/bootstrap/cache/"
-      # entry: group:www-data:rwX
-      #state: query
-#     recursive: yes
-#     state: present
-
 - name: Make sure the remote app root exists and has the right permissions
   file:
     path: "{{ remote_www_root }}/{{ app_root_dir }}"
@@ -29,21 +21,16 @@
     owner: "{{ remote_user }}"
     group: "{{ remote_user }}"
 
- - name: Set up additional directory permissions for www-data user on bootstrap/cache folder
+- name: Set up additional directory permissions for www-data user on bootstrap/cache folder
     file:
       path: "{{ remote_www_root }}/{{ app_root_dir }}/bootstrap/cache"
       state: directory
       mode: '0777'
       owner: "{{ remote_user }}"
-#     recursive: yes    
-# become: yes
-
- - name: Set up additional directory permissions for www-data user on storage folder
+- name: Set up additional directory permissions for www-data user on storage folder
     file:
       path: "{{ remote_www_root }}/{{ app_root_dir }}/storage/logs/laravel.log"
       mode: '0777'
       owner: "{{ remote_user }}"
- #    recursive: yes
       state: directory
-      #      become: yes
  
