@@ -11,6 +11,11 @@
 - name: print git version
   debug:
     msg: "The current version of git is {{git_version}}"
+    
+ - name: clone git repo
+   git:
+      repo: "{{laravel_repo}}"
+      dest: "{{ remote_www_root }}/{{ app_root_dir }}"
       
 - name: Make sure the remote app root exists and has the right permissions
   file:
