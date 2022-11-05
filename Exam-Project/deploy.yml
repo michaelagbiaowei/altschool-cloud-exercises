@@ -7,8 +7,8 @@
     - setup
     - apache2
     - php
-#     - composer
+    - composer
 #     - mysql
-#    - geerlingguy.mysql 
-#    - deploy
+    #- geerlingguy.mysql
+    - deploy
     
