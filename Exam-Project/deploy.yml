@@ -6,7 +6,7 @@
   roles:
     - setup
     - apache2
-#     - php
+    - php
 #     - composer
 #     - mysql
 #    - geerlingguy.mysql 
