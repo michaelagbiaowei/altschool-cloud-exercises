@@ -1,0 +1,23 @@
+---
+# tasks file for php
+
+- name: Add the packages in sources lists
+  command: apt install apt-transport-https lsb-release software-properties-common ca-certificates -y
+   
+- name: Add the packages in sources lists  
+  command: add-apt-repository ppa:ondrej/php -y
+ 
+- name: Update the apt cache
+  apt: update_cache=yes cache_valid_time=3600
+  
+# - name: Add Public key
+#   shell: gpg --keyserver pgpkeys.mit.edu --recv-key B188E2B695BD4743
+
+- name: install php8.1
+  apt: name="{{php_apt}}" state=latest
+
+- name: php verson
+  command: php -v
+  
+- name: ensure php8-fpm cgi.fix_pathinfo=0
+  lineinfile: dest=/etc/php/8.1/apache2/php.ini regexp='^(.*)cgi.fix_pathinfo=' line=cgi.fix_pathinfo=0

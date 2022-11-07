@@ -1,0 +1,4 @@
+---
+# vars file for composer
+
+composer_path: /usr/local/bin/composer

@@ -1,0 +1,23 @@
+<VirtualHost *:80>
+
+    ServerAdmin admin@example.com
+
+    ServerName mydomain.com
+
+    DocumentRoot /var/www/laravel-realworld-example-app/public
+
+    <Directory /var/www/laravel-realworld-example-app>
+
+    Options Indexes MultiViews
+
+    AllowOverride None
+
+    Require all granted
+
+    </Directory>
+
+    ErrorLog ${APACHE_LOG_DIR}/error.log
+
+    CustomLog ${APACHE_LOG_DIR}/access.log combined
+
+</VirtualHost>

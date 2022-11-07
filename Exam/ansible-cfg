@@ -1,6 +1,6 @@
 [defaults]
 inventory = hosts
-remote_user = ansible
+remote_user = ubuntu
 host_key_checking = false
 ask_pass=false
 roles_path=./roles

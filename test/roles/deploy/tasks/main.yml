@@ -1,0 +1,32 @@
+---
+# tasks file for deploy
+
+- name: Set up .env file
+  template:
+    src: .env.j2
+    dest: "{{ remote_www_root }}/{{ app_root_dir }}/.env"
+    
+- name: Set up web.php file
+  template:
+    src: wep.php.j2
+    dest: "{{ remote_www_root }}/{{ app_root_dir }}/routes/.wep.php"
+
+- name: Installing Laravel dependencies
+  composer:
+    command: install
+    working_dir: "{{ remote_www_root }}/{{ app_root_dir }}"
+  become: false
+  tags: [ 'composer:install' ]
+  ignore_errors: yes
+
+- name: Generate app key
+  command: "/usr/bin/php {{ remote_www_root }}/{{ app_root_dir }}/artisan key:generate"
+  tags: [ 'laravel', 'artisan:key' ]
+
+- name: Set up app storage link
+  command: "/usr/bin/php {{ remote_www_root }}/{{ app_root_dir }}/artisan storage:link"
+  tags: [ 'laravel', 'artisan:storage' ]
+
+- name: Run Migrations + Seeders
+  command: "/usr/bin/php {{ remote_www_root }}/{{ app_root_dir }}/artisan db:seed --class=CustomSeeder --force"
+  tags: [ 'laravel', 'artisan:migrate' ]

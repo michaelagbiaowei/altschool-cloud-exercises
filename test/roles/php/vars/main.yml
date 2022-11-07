@@ -1,0 +1,4 @@
+---
+# vars file for php
+
+php_apt: ['php8.1', 'libapache2-mod-php', 'php8.1-dev', 'php8.1-zip', 'php8.1-curl', 'php8.1-mbstring', 'php8.1-mysql', 'php8.1-gd', 'php8.1-xml', 'php8.1-fpm']

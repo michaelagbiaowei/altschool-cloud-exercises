@@ -1,0 +1,53 @@
+---
+# tasks file for setup
+- name: update slave server
+  command: apt update
+
+- name: install git and git dependencies
+  apt:
+    name: git
+    state: present
+
+- name: print git version
+  debug:
+    msg: "The current version of git is {{git_version}}"
+    
+- name: clone git repo
+  git:
+     repo: "{{git_repo_url}}"
+     dest: "{{ remote_www_root }}/{{ app_root_dir }}"
+  become: yes
+  ignore_errors: yes
+      
+- name: Make sure the remote app root exists and has the right permissions
+  file:
+    path: "{{ remote_www_root }}/{{ app_root_dir }}"
+    state: directory
+    mode: '0755'
+    owner: "{{ remote_user }}"
+    group: "{{ remote_user }}"
+
+- name: Set up additional directory permissions for www-data user on bootstrap/cache folder
+  file:
+    path: "{{ remote_www_root }}/{{ app_root_dir }}/bootstrap/cache"
+    state: directory
+    mode: '0777'
+    owner: "{{ remote_user }}"
+    
+- name: Set up additional directory permissions for www-data user on storage folder
+  file:
+    path: "{{ remote_www_root }}/{{ app_root_dir }}/storage"
+    mode: '0777'
+    owner: "{{ remote_user }}"
+    state: directory
+
+      #- name: set www:data
+      #shell: sudo chown -R www-data:www-data  "{{ remote_www_root }}/{{ app_root_dir }}"
+
+      #- name: set more per
+      #shell: sudo chmod -R 775 /var/www/laravel-realworld-example-app
+
+      #- name: set mor per
+      #shell: sudo chmod -R 775 /var/www/laravel-realworld-example-app/bootstrap/cache
+      #- name: ert more data on storage
+      #shell: sudo chmod -R 775  "{{ remote_www_root }}/{{ app_root_dir }}"/storage

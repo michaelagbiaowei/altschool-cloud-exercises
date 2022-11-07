@@ -1,0 +1,12 @@
+---
+# vars file for setup
+
+git_version: 2.30.2
+
+git_repo_url: https://github.com/michaelagbiaowei/laravel-realworld-example-app.git
+
+app_root_dir: laravel-realworld-example-app
+
+remote_www_root: /var/www
+
+remote_user: ubuntu
