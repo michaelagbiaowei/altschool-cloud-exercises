@@ -8,7 +8,7 @@
     - apache2
     - php
     - composer
-#     - mysql
     - geerlingguy.mysql
     - deploy
+    - pgsql
     

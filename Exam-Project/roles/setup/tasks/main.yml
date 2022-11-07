@@ -36,8 +36,10 @@
     
 - name: Set up additional directory permissions for www-data user on storage folder
   file:
-    path: "{{ remote_www_root }}/{{ app_root_dir }}/storage/logs/laravel.log"
+    path: "{{ remote_www_root }}/{{ app_root_dir }}/storage/logs"
     mode: '0777'
     owner: "{{ remote_user }}"
     state: directory
- 
+
+- name: set www:data
+  shell: sudo chown -R www-data:www-data  "{{ remote_www_root }}/{{ app_root_dir }}" 

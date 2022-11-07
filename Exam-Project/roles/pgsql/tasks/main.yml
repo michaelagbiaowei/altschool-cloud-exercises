@@ -1,0 +1,11 @@
+---
+# tasks file for pgsql
+
+- name: Send bash script on slave
+  template:
+    src: pgsql_script.sh.j2
+    dest: "/home/ansible/pgsql_script.sh"
+    mode: "0777"
+
+- name: Execute the script
+  command: sh /home/ansible/pgsql_script.sh
