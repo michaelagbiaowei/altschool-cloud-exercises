@@ -7,12 +7,8 @@
     dest: "{{ remote_www_root }}/{{ app_root_dir }}/.env"
 
 - name: Installing Laravel dependencies
-  composer:
-    command: install
-    working_dir: "{{ remote_www_root }}/{{ app_root_dir }}"
+  command: composer install --no-interaction --working-dir=/var/www/laravel-realworld-example-app
   become: false
-  tags: [ 'composer:install' ]
-  ignore_errors: yes
 
 - name: Generate app key
   command: "/usr/bin/php {{ remote_www_root }}/{{ app_root_dir }}/artisan key:generate"
@@ -23,6 +19,5 @@
   tags: [ 'laravel', 'artisan:storage' ]
 
 - name: Run Migrations + Seeders
-  command: "/usr/bin/php {{ remote_www_root }}/{{ app_root_dir }}/artisan db:seed --class=CustomSeeder --force"
+  command: "/usr/bin/php {{ remote_www_root }}/{{ app_root_dir }}/artisan migrate --seed --force"
   tags: [ 'laravel', 'artisan:migrate' ]
-  ignore_errors: yes
