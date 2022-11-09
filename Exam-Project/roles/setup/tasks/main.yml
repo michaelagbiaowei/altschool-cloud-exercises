@@ -23,7 +23,7 @@
   file:
     path: "{{ remote_www_root }}/{{ app_root_dir }}"
     state: directory
-    mode: '0755'
+    mode: '0777'
     owner: "{{ remote_user }}"
     group: "{{ remote_user }}"
 
@@ -31,15 +31,17 @@
   file:
     path: "{{ remote_www_root }}/{{ app_root_dir }}/bootstrap/cache"
     state: directory
-    mode: '0775'
+    mode: '0777'
     owner: "{{ remote_user }}"
     
 - name: Set up additional directory permissions for www-data user on storage folder
   file:
-    path: "{{ remote_www_root }}/{{ app_root_dir }}/storage"
-    mode: '0777'
+    path: "{{ remote_www_root }}/{{ app_root_dir }}/storage/logs/laravel.log"
+    mode: '0775'
     owner: "{{ remote_user }}"
     state: directory
+  ignore_errors: yes
 
-- name: set www:data
-  shell: sudo chown -R ubuntu:ubuntu  "{{ remote_www_root }}/{{ app_root_dir }}"
+- name: enable rewrite
+  shell: a2enmod rewrite
+  become: yes

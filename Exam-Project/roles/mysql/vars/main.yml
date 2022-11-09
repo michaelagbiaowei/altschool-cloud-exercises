@@ -1,0 +1,7 @@
+---
+# vars file for mysql
+
+mysql_app_db: mysqldb
+mysql_app_user: mysqluser
+mysql_app_pass: Ifiekemi1997
+mysql_root_password: Ifiekemi1990
