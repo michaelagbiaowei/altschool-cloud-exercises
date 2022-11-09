@@ -1,25 +1,30 @@
 <VirtualHost *:80>
 
-    ServerAdmin michaelagbiaowei.me
+    #ServerAdmin michaelagbiaowei.me
 
-    ServerAlias http://54.161.133.191
-    
-    ServerName slave
+    ServerName maiempire.online
+
+    ServerAlias www.maiempire.online
 
     DocumentRoot /var/www/laravel-realworld-example-app/public
 
     <Directory /var/www/laravel-realworld-example-app>
 
-    Options Indexes MultiViews
+    Options Indexes FollowSymLinks MultiViews
 
-    AllowOverride None
+    AllowOverride All
+
+    Order allow,deny
+
+    allow from all
 
     Require all granted
 
     </Directory>
 
+    LogLevel debug
+
     ErrorLog ${APACHE_LOG_DIR}/error.log
 
     CustomLog ${APACHE_LOG_DIR}/access.log combined
-
 </VirtualHost>
