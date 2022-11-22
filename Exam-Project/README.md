@@ -6,6 +6,9 @@
 
 ## **(Deploy Laravel and Set up Postgresql)**
 
+<img align="center" width="200" src="https://github.com/michaelagbiaowei/altschool-cloud-exercises/blob/main/Mimi-Project/images/logo.png"> 
+
+
 
 ## **Question**
 
