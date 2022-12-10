@@ -27,13 +27,11 @@ We create a bucket first, and later we upload files and folders to it.
 
 ## 2. General configuration
 
-Provide the bucket-name. The
-bucket name must be unique worldwide e.g. demo-bucket-2022-12-09, and must not contain spaces or uppercase
-letters.
+Provide the bucket-name. The bucket name must be unique worldwide e.g. demo-bucket-2022-12-09, and must not contain spaces or uppercase letters.
 
 ![s1](/third_semester/Exercise-1/images/s2.png)
 
-## 3. Public Access settings
+## 3. Private Access settings
 
 Bock all public access.
 
@@ -42,14 +40,15 @@ Bock all public access.
 ## 4. Bucket Versioning and Encryption
 
 - Bucket Versioning - Keep it disabled.
+
 - Encryption - If enabled, it will encrypt the files being stored in the bucket.
 
 - Object Lock - If enables, it will prevent the files in the bucket from being deleted or modified
 
-In the snapshots above, we have created a public bucket. Let's see how to upload files and
-folders to the bucket, and configure additional settings.
-
 ![s1](/third_semester/Exercise-1/images/s4.png)
+
+In the snapshots above, we have created a private bucket. Let's see how to upload files and
+folders to the bucket, and configure additional settings.
 
 ## 5. Upload File/Folders to the Bucket
 
