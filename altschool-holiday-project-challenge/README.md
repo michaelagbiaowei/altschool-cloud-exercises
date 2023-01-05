@@ -89,7 +89,7 @@ Open the Amazon VPC console at https://console.aws.amazon.com/vpc/
 
 On the VPC Dashboard, choose Launch VPC Wizard.
 
-![s1](/images/vpc1.png)
+![s1](altschool-holiday-project-challenge/images/vpc1.png)
 
 On the VPC configuration Dashboard choosing VPC and more automatically launches Private Subnets, Public Subnets, Routing Tables and Subnet Associations, Internet GateWay, Elastic IP, IP CIDR block, Availability Zones and Network Access Translator.
 
